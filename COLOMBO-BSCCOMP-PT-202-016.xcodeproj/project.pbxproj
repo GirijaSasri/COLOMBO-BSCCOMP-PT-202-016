@@ -22,6 +22,10 @@
 		52744C2827FA1C5C00289F6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C2727FA1C5C00289F6F /* LoginView.swift */; };
 		52744C2A27FA1C8700289F6F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C2927FA1C8700289F6F /* RegisterView.swift */; };
 		52744C2C27FA1CEA00289F6F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52744C2B27FA1CEA00289F6F /* Launch Screen.storyboard */; };
+		52744C2E27FA252000289F6F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C2D27FA252000289F6F /* HomeView.swift */; };
+		52744C3027FA256600289F6F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C2F27FA256600289F6F /* LoginViewModel.swift */; };
+		52744C3227FA258C00289F6F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C3127FA258C00289F6F /* RegisterViewModel.swift */; };
+		52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C3327FA25B100289F6F /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		52744C2727FA1C5C00289F6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		52744C2927FA1C8700289F6F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		52744C2B27FA1CEA00289F6F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		52744C2D27FA252000289F6F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		52744C2F27FA256600289F6F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		52744C3127FA258C00289F6F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		52744C3327FA25B100289F6F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,7 @@
 			children = (
 				52744C2727FA1C5C00289F6F /* LoginView.swift */,
 				52744C2927FA1C8700289F6F /* RegisterView.swift */,
+				52744C2D27FA252000289F6F /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +170,9 @@
 		52744C2327FA1B0A00289F6F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				52744C2F27FA256600289F6F /* LoginViewModel.swift */,
+				52744C3127FA258C00289F6F /* RegisterViewModel.swift */,
+				52744C3327FA25B100289F6F /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -322,7 +334,11 @@
 			files = (
 				52744C2827FA1C5C00289F6F /* LoginView.swift in Sources */,
 				52744C2A27FA1C8700289F6F /* RegisterView.swift in Sources */,
+				52744C3227FA258C00289F6F /* RegisterViewModel.swift in Sources */,
+				52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */,
+				52744C3027FA256600289F6F /* LoginViewModel.swift in Sources */,
 				52744BF027F9F0C200289F6F /* ContentView.swift in Sources */,
+				52744C2E27FA252000289F6F /* HomeView.swift in Sources */,
 				52744BEE27F9F0C200289F6F /* COLOMBO_BSCCOMP_PT_202_016App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
