@@ -19,6 +19,9 @@
 		52744C1D27F9FD2600289F6F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 52744C1C27F9FD2600289F6F /* FirebaseDatabase */; };
 		52744C1F27F9FD2600289F6F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 52744C1E27F9FD2600289F6F /* FirebaseFirestore */; };
 		52744C2127F9FD2600289F6F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 52744C2027F9FD2600289F6F /* FirebaseStorage */; };
+		52744C2827FA1C5C00289F6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C2727FA1C5C00289F6F /* LoginView.swift */; };
+		52744C2A27FA1C8700289F6F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C2927FA1C8700289F6F /* RegisterView.swift */; };
+		52744C2C27FA1CEA00289F6F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52744C2B27FA1CEA00289F6F /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		52744C0827F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COLOMBO_BSCCOMP_PT_202_016UITests.swift; sourceTree = "<group>"; };
 		52744C0A27F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COLOMBO_BSCCOMP_PT_202_016UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		52744C1727F9F98800289F6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52744C2727FA1C5C00289F6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		52744C2927FA1C8700289F6F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		52744C2B27FA1CEA00289F6F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +110,16 @@
 		52744BEC27F9F0C200289F6F /* COLOMBO-BSCCOMP-PT-202-016 */ = {
 			isa = PBXGroup;
 			children = (
+				52744C2527FA1BE800289F6F /* Component */,
+				52744C2427FA1B6700289F6F /* Model */,
+				52744C2327FA1B0A00289F6F /* ViewModel */,
+				52744C2227FA1AD000289F6F /* View */,
 				52744BED27F9F0C200289F6F /* COLOMBO_BSCCOMP_PT_202_016App.swift */,
 				52744BEF27F9F0C200289F6F /* ContentView.swift */,
 				52744C1727F9F98800289F6F /* GoogleService-Info.plist */,
 				52744BF127F9F0C500289F6F /* Assets.xcassets */,
 				52744BF327F9F0C500289F6F /* Preview Content */,
+				52744C2B27FA1CEA00289F6F /* Launch Screen.storyboard */,
 			);
 			path = "COLOMBO-BSCCOMP-PT-202-016";
 			sourceTree = "<group>";
@@ -136,6 +147,36 @@
 				52744C0A27F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016UITestsLaunchTests.swift */,
 			);
 			path = "COLOMBO-BSCCOMP-PT-202-016UITests";
+			sourceTree = "<group>";
+		};
+		52744C2227FA1AD000289F6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52744C2727FA1C5C00289F6F /* LoginView.swift */,
+				52744C2927FA1C8700289F6F /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52744C2327FA1B0A00289F6F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52744C2427FA1B6700289F6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52744C2527FA1BE800289F6F /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +294,7 @@
 			files = (
 				52744BF527F9F0C500289F6F /* Preview Assets.xcassets in Resources */,
 				52744BF227F9F0C500289F6F /* Assets.xcassets in Resources */,
+				52744C2C27FA1CEA00289F6F /* Launch Screen.storyboard in Resources */,
 				52744C1827F9F98800289F6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +320,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52744C2827FA1C5C00289F6F /* LoginView.swift in Sources */,
+				52744C2A27FA1C8700289F6F /* RegisterView.swift in Sources */,
 				52744BF027F9F0C200289F6F /* ContentView.swift in Sources */,
 				52744BEE27F9F0C200289F6F /* COLOMBO_BSCCOMP_PT_202_016App.swift in Sources */,
 			);
@@ -445,6 +489,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +518,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
