@@ -14,10 +14,10 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView{
-            
-        
-            
+   
             VStack {
+           
+                
                 Group{
                     Text("Login")
                         .font(.system( size: 32, weight: .bold))

@@ -23,6 +23,8 @@ struct RegisterView: View {
                 Text("Register")
                 .font(.system( size: 32, weight: .bold))
                 .padding(.bottom)
+                .foregroundColor(.white)
+            
                 Text("Register with the system")
             
                 TextField("NIC Number", text: $nic)
@@ -51,12 +53,18 @@ struct RegisterView: View {
                 
             }) {
                 Text("Sign Up")
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .padding(.vertical)
+                    .frame(width:UIScreen.main.bounds.width - 150)
+                    .background(Color("button"))
+                    .clipShape(Capsule())
             }
             
              
                  
                 }
-        
+        .background(Color("AppTextColor").ignoresSafeArea(.all,edges: .all))
     }
 }
 
