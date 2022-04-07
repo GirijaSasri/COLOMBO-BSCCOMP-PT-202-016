@@ -17,7 +17,7 @@ struct COLOMBO_BSCCOMP_PT_202_016App: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            HomePageView()
         }
     }
 }
