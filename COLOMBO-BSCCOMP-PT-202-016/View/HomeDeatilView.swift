@@ -10,25 +10,7 @@ import SwiftUI
 struct HomeDeatilView: View {
     var body: some View {
         VStack{
-            ZStack{
-                Color("HomePageBackgroud")
-                    .edgesIgnoringSafeArea(.all)
-                
-                
-                VStack{
-                    Image("DemoHouseImage_1")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .edgesIgnoringSafeArea(.top)
-                    
-                    DetailView()
-                        .offset(y:-40)
-                    
-                    
-                }
-                
-                
-            }
+            PricebarView()
         }
 
     }
@@ -99,12 +81,64 @@ struct DetailView: View {
                 }
                 
             }
+       Spacer()
             
+//            VStack(alignment: .leading) {
+//                Text("Town / Village")
+//                    .fontWeight(.semibold)
+//            }
+ 
             
         }
         .padding()
         .padding(.top)
         .background(Color("HomePageBackgroud"))
         .cornerRadius(40.0)
+    }
+}
+
+struct PricebarView: View {
+    var body: some View {
+        ZStack{
+            Color("HomePageBackgroud")
+                .edgesIgnoringSafeArea(.all)
+            
+            
+            VStack{
+                Image("DemoHouseImage_1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .edgesIgnoringSafeArea(.top)
+                
+                DetailView()
+                    .offset(y:-40)
+                
+                
+            }
+            HStack{
+                Text("Rs.50000")
+                    .font(.title)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Button(action:{},label:{
+                    
+                    Text("Chat")
+                        .padding()
+                        .padding(.horizontal)
+                        .background(Color.white)
+                        .cornerRadius(10.0)
+                    
+                    
+                })
+                
+            }
+            .padding()
+            .padding(.horizontal)
+            .background(Color("AppTextColor"))
+            .frame(maxHeight: .infinity,alignment: .bottom)
+        }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
