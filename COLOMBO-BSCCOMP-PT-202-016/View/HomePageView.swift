@@ -14,59 +14,8 @@ struct HomePageView: View {
     var body: some View {
         
         
-        ScrollView {
-            ZStack{
-            Color("HomePageBackgroud")
-                .edgesIgnoringSafeArea(.all)
-                
-                VStack (alignment:.leading){
-                    AppBarView()
-                    
-                    TagLingView()
-                        .padding()
-                    
-                    LandSeacrhView()
-                        .padding()
-                       
-                    VStack{
-                    Text("Top Ads")
-                        .fontWeight(.bold)
-                        .font(.title2)
-                        .foregroundColor(Color("BlackColor"))
-                        .padding(.horizontal)
-                    
-                    ScrollView (.horizontal,showsIndicators: false){
-                        HStack {
-                            ForEach(0 ..< 4) { index in
-                                ItemCardView(image:Image("DemoHouseImage_\(index + 1)"), size: 210)
-                            }
-                            .padding(.trailing)
-                        }
-                        .padding(.leading)
-                    }
-                    
-                      Text("Trending Ads")
-                          .fontWeight(.bold)
-                          .font(.title2)
-                          .foregroundColor(Color("BlackColor"))
-                          .padding(.horizontal)
-                          .padding(.leading)
-                      
-                      ScrollView (.horizontal,showsIndicators: false){
-                          HStack {
-                              ForEach(0 ..< 4) { index in
-                                  ItemCardView(image:Image("DemoHouseImage_\(index + 1)"), size: 180)
-                              }
-                              .padding(.trailing)
-                          }
-                          .padding(.leading)
-                      }
-                    }
-                    
-                    
-                }
-                
-            }
+        VStack {
+            HomelayoutView()
         }
     //navigation bar
 //        HStack{
@@ -181,5 +130,66 @@ struct ItemCardView: View {
         .padding()
         .background(Color.white)
         .cornerRadius(20.0)
+    }
+}
+
+struct HomelayoutView: View {
+    var body: some View {
+        ZStack {
+            ScrollView {
+                ZStack{
+                    Color("HomePageBackgroud")
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    VStack (alignment:.leading){
+                        AppBarView()
+                        
+                        TagLingView()
+                            .padding()
+                        
+                        LandSeacrhView()
+                            .padding()
+                        
+                        VStack{
+                            Text("Top Ads")
+                                .fontWeight(.bold)
+                                .font(.title2)
+                                .foregroundColor(Color("BlackColor"))
+                                .padding(.horizontal)
+                            
+                            ScrollView (.horizontal,showsIndicators: false){
+                                HStack {
+                                    ForEach(0 ..< 4) { index in
+                                        ItemCardView(image:Image("DemoHouseImage_\(index + 1)"), size: 210)
+                                    }
+                                    .padding(.trailing)
+                                }
+                                .padding(.leading)
+                            }
+                            
+                            Text("Trending Ads")
+                                .fontWeight(.bold)
+                                .font(.title2)
+                                .foregroundColor(Color("BlackColor"))
+                                .padding(.horizontal)
+                                .padding(.leading)
+                            
+                            ScrollView (.horizontal,showsIndicators: false){
+                                HStack {
+                                    ForEach(0 ..< 4) { index in
+                                        ItemCardView(image:Image("DemoHouseImage_\(index + 1)"), size: 180)
+                                    }
+                                    .padding(.trailing)
+                                }
+                                .padding(.leading)
+                            }
+                        }
+                        
+                        
+                    }
+                    
+                }
+            }
+        }
     }
 }
