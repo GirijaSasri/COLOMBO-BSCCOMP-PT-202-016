@@ -68,10 +68,18 @@ struct HomePageView: View {
                 
             }
         }
-        
-        // will display the naigation bar
-        
-        
+    //navigation bar
+//        HStack{
+//            Button(action:{},label: {
+//                Image("HomeIcon")
+//                    .frame(maxWidth: .infinity)
+//            })
+//        }
+//        .padding()
+//        .background(Color.white)
+//        .clipShape(Capsule())
+//        .padding()
+
     }
 }
 
