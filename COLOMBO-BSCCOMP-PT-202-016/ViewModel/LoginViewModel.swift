@@ -12,6 +12,11 @@ class LoginViewModel: ObservableObject
 {
      
     let auth = Auth.auth()
+    private var loginService:LoginServiceProtocol
+    
+    init(loginService: LoginServiceProtocol = LoginService()) {
+        self.loginService = loginService
+    }
    
     var isSignedIn: Bool
     {
@@ -21,20 +26,14 @@ class LoginViewModel: ObservableObject
     
     func login(email:String,password:String)
     {
-        
-        auth.signIn(withEmail: email, password: password)
-        {
-            result , error in
-            
-            guard result != nil,error==nil else
-            {
-                return
-            }
-            
-            //Success Full message
-            
-            
-            
+        loginService.userLogin(email: email, password: password) { result in
+                    switch result {
+                    case .success:
+                        print(result)
+                        print("success")
+                    case let .failure(error) :
+                        print(error.localizedDescription)
+                    }
         }
         
     }

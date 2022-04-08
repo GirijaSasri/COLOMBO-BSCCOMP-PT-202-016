@@ -11,9 +11,7 @@ struct LoginView: View {
     @State var username=""
     @State var password=""
    
-  
-    
-    
+    @StateObject var loginViewModel = LoginViewModel()
     var body: some View {
         
         NavigationView{
@@ -37,23 +35,25 @@ struct LoginView: View {
                        .padding(.bottom)
                        .foregroundColor(.white)
                 
-             HStack{
-              
-                TextField("Username", text: $username)
-//                  .padding(.all)
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    
-                  }
-                    .padding()
-                    .background(Color.white.opacity(0.12))
-                    .cornerRadius(15)
-                    .padding(.horizontal)
+//             HStack{
+//
+//                TextField("Username", text: $username)
+////                  .padding(.all)
+//                    .font(.title2)
+//                    .foregroundColor(.white)
+//
+//                  }
+//                    .padding()
+//                    .background(Color.white.opacity(0.12))
+//                    .cornerRadius(15)
+//                    .padding(.horizontal)
+                
+            AppTextFieldView(name: "Username", value: $username)
                     
                     
             HStack{
            
-                TextField("Password", text: $password)
+                SecureField("Password", text: $password)
 //                  .padding(.all)
                     .font(.title2)
                     .foregroundColor(.white)
@@ -68,7 +68,9 @@ struct LoginView: View {
            
             
             
-            Button(action:{})
+            Button(action:{
+                loginViewModel.login(email: username, password: password)
+            })
                {Text("Login")
                     .fontWeight(.heavy)
                     .foregroundColor(.black)

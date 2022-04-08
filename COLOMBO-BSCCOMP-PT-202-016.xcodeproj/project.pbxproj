@@ -14,7 +14,6 @@
 		52744BFF27F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744BFE27F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016Tests.swift */; };
 		52744C0927F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C0827F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016UITests.swift */; };
 		52744C0B27F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C0A27F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016UITestsLaunchTests.swift */; };
-		52744C1827F9F98800289F6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52744C1727F9F98800289F6F /* GoogleService-Info.plist */; };
 		52744C1B27F9FD2600289F6F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 52744C1A27F9FD2600289F6F /* FirebaseAuth */; };
 		52744C1D27F9FD2600289F6F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 52744C1C27F9FD2600289F6F /* FirebaseDatabase */; };
 		52744C1F27F9FD2600289F6F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 52744C1E27F9FD2600289F6F /* FirebaseFirestore */; };
@@ -27,6 +26,9 @@
 		52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C3327FA25B100289F6F /* HomeViewModel.swift */; };
 		52747AC72800060C00B34ABF /* HomeDeatilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52747AC62800060C00B34ABF /* HomeDeatilView.swift */; };
 		5277189C27FEC49A0071B8D4 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277189B27FEC49A0071B8D4 /* HomePageView.swift */; };
+		52D6D6672800AE4B001808DA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D6662800AE4B001808DA /* LoginService.swift */; };
+		52D6D6692800B59A001808DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52D6D6682800B59A001808DA /* GoogleService-Info.plist */; };
+		52D6D66B2800B6C0001808DA /* AppTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +59,6 @@
 		52744C0427F9F0C500289F6F /* COLOMBO-BSCCOMP-PT-202-016UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "COLOMBO-BSCCOMP-PT-202-016UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52744C0827F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COLOMBO_BSCCOMP_PT_202_016UITests.swift; sourceTree = "<group>"; };
 		52744C0A27F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COLOMBO_BSCCOMP_PT_202_016UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		52744C1727F9F98800289F6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52744C2727FA1C5C00289F6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		52744C2927FA1C8700289F6F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		52744C2B27FA1CEA00289F6F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -66,6 +67,9 @@
 		52744C3327FA25B100289F6F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		52747AC62800060C00B34ABF /* HomeDeatilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDeatilView.swift; sourceTree = "<group>"; };
 		5277189B27FEC49A0071B8D4 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		52D6D6662800AE4B001808DA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		52D6D6682800B59A001808DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,13 +124,14 @@
 		52744BEC27F9F0C200289F6F /* COLOMBO-BSCCOMP-PT-202-016 */ = {
 			isa = PBXGroup;
 			children = (
+				52D6D6642800ADE9001808DA /* Service */,
 				52744C2527FA1BE800289F6F /* Component */,
 				52744C2427FA1B6700289F6F /* Model */,
 				52744C2327FA1B0A00289F6F /* ViewModel */,
 				52744C2227FA1AD000289F6F /* View */,
 				52744BED27F9F0C200289F6F /* COLOMBO_BSCCOMP_PT_202_016App.swift */,
 				52744BEF27F9F0C200289F6F /* ContentView.swift */,
-				52744C1727F9F98800289F6F /* GoogleService-Info.plist */,
+				52D6D6682800B59A001808DA /* GoogleService-Info.plist */,
 				52744BF127F9F0C500289F6F /* Assets.xcassets */,
 				52744BF327F9F0C500289F6F /* Preview Content */,
 				52744C2B27FA1CEA00289F6F /* Launch Screen.storyboard */,
@@ -190,8 +195,17 @@
 		52744C2527FA1BE800289F6F /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		52D6D6642800ADE9001808DA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				52D6D6662800AE4B001808DA /* LoginService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,9 +322,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52744BF527F9F0C500289F6F /* Preview Assets.xcassets in Resources */,
+				52D6D6692800B59A001808DA /* GoogleService-Info.plist in Resources */,
 				52744BF227F9F0C500289F6F /* Assets.xcassets in Resources */,
 				52744C2C27FA1CEA00289F6F /* Launch Screen.storyboard in Resources */,
-				52744C1827F9F98800289F6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +353,11 @@
 				52744C2A27FA1C8700289F6F /* RegisterView.swift in Sources */,
 				52744C3227FA258C00289F6F /* RegisterViewModel.swift in Sources */,
 				52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */,
+				52D6D66B2800B6C0001808DA /* AppTextFieldView.swift in Sources */,
 				52744C3027FA256600289F6F /* LoginViewModel.swift in Sources */,
 				52747AC72800060C00B34ABF /* HomeDeatilView.swift in Sources */,
 				52744BF027F9F0C200289F6F /* ContentView.swift in Sources */,
+				52D6D6672800AE4B001808DA /* LoginService.swift in Sources */,
 				5277189C27FEC49A0071B8D4 /* HomePageView.swift in Sources */,
 				52744BEE27F9F0C200289F6F /* COLOMBO_BSCCOMP_PT_202_016App.swift in Sources */,
 			);
