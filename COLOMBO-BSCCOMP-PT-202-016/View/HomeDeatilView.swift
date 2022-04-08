@@ -64,29 +64,41 @@ struct DetailView: View {
                 .lineSpacing(8.0)
                 .opacity(0.6)
             
-            HStack{
+            HStack(alignment: .top){
                 VStack(alignment:.leading){
                     Text("Land / House")
-                    .fontWeight(.semibold)
+                        .fontWeight(.semibold)
+                        .padding(.bottom,4)
                     Text("Commerical property")
                         .opacity(0.5)
                     Text("Commerical property")
                         .opacity(0.5)
                     
                 }
-                 
+                .frame(maxWidth: .infinity,alignment: .leading)
+                
                 VStack(alignment: .leading){
                     Text("Land Size")
                         .fontWeight(.semibold)
-                    
+                        .padding(.bottom,4)
                     Text("25 Perch")
                         .opacity(0.5)
-                       
-                       
-                    
+                  
                 }
+                .frame(maxWidth: .infinity,alignment: .leading)
             }
             .padding(.vertical)
+            
+            HStack{
+                VStack{
+                    Text("District")
+                        .fontWeight(.semibold)
+                    Text("Colombo")
+                        .opacity(0.5)
+                    
+                }
+                
+            }
             
             
         }
