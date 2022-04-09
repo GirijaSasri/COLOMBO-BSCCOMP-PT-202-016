@@ -24,7 +24,7 @@ struct LoginView: View {
                         .padding(.bottom)
                         .foregroundColor(.white)
                     
-                    Text("Login With Your Email And Password")
+//                    Text("Login With Your Email And Password")
                   Image("LoginLogo")
                        .resizable()
                        .aspectRatio(contentMode: .fit)
