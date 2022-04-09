@@ -24,9 +24,9 @@ class RegisterViewModel: ObservableObject
 //        return auth.currentUser != nil
 //    }
     
-    func login(email:String,password:String)
+    func register(email:String,password:String,name:String)
     {
-        registerService.userRegistration(email: email, password: password) { result in
+        registerService.userRegistration(email: email, password: password,name: name) { result in
                     switch result {
                     case .success:
                         print(result)

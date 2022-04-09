@@ -22,7 +22,7 @@ struct RegistrationView: View {
     @State private var retype_password = ""
     @State private var geolocation = ""
     
-    @StateObject var registerViewModel = RegisterViewModel()
+    @StateObject var rgViewModule = RegisterViewModel()
     
     var body: some View {
         
@@ -69,7 +69,9 @@ struct RegistrationView: View {
                 
                    
             }
-            Button(action:{},label:{
+            Button(action:{
+                rgViewModule.register(email: email, password: password,name: name)
+            },label:{
                
                
          
