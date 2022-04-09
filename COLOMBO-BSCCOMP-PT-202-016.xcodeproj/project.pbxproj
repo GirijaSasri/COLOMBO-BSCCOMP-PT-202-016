@@ -26,6 +26,7 @@
 		52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C3327FA25B100289F6F /* HomeViewModel.swift */; };
 		52747AC72800060C00B34ABF /* HomeDeatilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52747AC62800060C00B34ABF /* HomeDeatilView.swift */; };
 		5277189C27FEC49A0071B8D4 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277189B27FEC49A0071B8D4 /* HomePageView.swift */; };
+		528FA4192801C38500106C81 /* SettingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528FA4182801C38500106C81 /* SettingPageView.swift */; };
 		52D6D6672800AE4B001808DA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D6662800AE4B001808DA /* LoginService.swift */; };
 		52D6D6692800B59A001808DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52D6D6682800B59A001808DA /* GoogleService-Info.plist */; };
 		52D6D66B2800B6C0001808DA /* AppTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */; };
@@ -68,6 +69,7 @@
 		52744C3327FA25B100289F6F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		52747AC62800060C00B34ABF /* HomeDeatilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDeatilView.swift; sourceTree = "<group>"; };
 		5277189B27FEC49A0071B8D4 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		528FA4182801C38500106C81 /* SettingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageView.swift; sourceTree = "<group>"; };
 		52D6D6662800AE4B001808DA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		52D6D6682800B59A001808DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextFieldView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				52747AC62800060C00B34ABF /* HomeDeatilView.swift */,
 				525B2EF62801343700D7361A /* RegistrationView.swift */,
 				52DFD20928018DA0000505B0 /* SellerAdvertisementView.swift */,
+				528FA4182801C38500106C81 /* SettingPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				525B2EF72801343700D7361A /* RegistrationView.swift in Sources */,
 				52DFD20A28018DA0000505B0 /* SellerAdvertisementView.swift in Sources */,
 				52744C2827FA1C5C00289F6F /* LoginView.swift in Sources */,
+				528FA4192801C38500106C81 /* SettingPageView.swift in Sources */,
 				52744C3227FA258C00289F6F /* RegisterViewModel.swift in Sources */,
 				52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */,
 				52D6D66B2800B6C0001808DA /* AppTextFieldView.swift in Sources */,

@@ -100,7 +100,7 @@ struct RegistrationView: View {
           }
           
             
-            }
+        }
     func existaccount(){
         print("existaccount")
     }

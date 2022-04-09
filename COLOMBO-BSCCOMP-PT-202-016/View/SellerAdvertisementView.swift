@@ -16,6 +16,9 @@ struct SellerAdvertisementView: View {
     @State private var district = ""
     @State private var townvillage = 0
     var parts = ["Town", "Village"]
+    @State private var propertyimage = ""
+    @State private var cageolocation = ""
+    @State private var deedimage = ""
     
     var body: some View {
         NavigationView{
@@ -41,14 +44,43 @@ struct SellerAdvertisementView: View {
                                 }
                 }
             }
+            Section(header:Text("Advertisement Infomation"))
+            {
+                TextField("Geo Location",text: $cageolocation)
+                TextField("Property Image",text: $propertyimage)
+                TextField("Deed Image",text: $deedimage)
+            }
             
             
-            .accentColor(.blue)
-            .navigationTitle("Create Advertisement")
+            Button(action:{},label:{
+               
+               
+         
+                    Text("Create")
+                         .fontWeight(.heavy)
+                         .foregroundColor(.black)
+                         .padding(.vertical)
+                         .frame(width:UIScreen.main.bounds.width - 150)
+                         .background(Color("button"))
+                         .clipShape(Capsule())
+                    
+               
+                
+                
+            })
+            
+       }
+        .accentColor(.blue)
+        .navigationTitle("Create Advertisement")
+        
+            
             
           
-       }
     }
+     
+        
+//
+        
 }
 
 struct SellerAdvertisementView_Previews: PreviewProvider {
