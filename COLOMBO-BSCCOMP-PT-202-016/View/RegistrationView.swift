@@ -66,17 +66,51 @@ struct RegistrationView: View {
                 
                 
             }
-            
-            
+            Button(action:{},label:{
+               
+               
+         
+                    Text("Create")
+                         .fontWeight(.heavy)
+                         .foregroundColor(.black)
+                         .padding(.vertical)
+                         .frame(width:UIScreen.main.bounds.width - 150)
+                         .background(Color("button"))
+                         .clipShape(Capsule())
+                    
+               
+                
+                
+            })
+          
             
             
             }
             .accentColor(.blue)
             .navigationTitle("Sign Up")
+            .toolbar{
+                ToolbarItemGroup(placement: .navigationBarTrailing){
+                    Button("Login", action: existaccount)
+                       
+                    Button("Home", action: re_home)
+                   
+                }
+            }
+            
           }
-
+          
             
             }
+    func existaccount(){
+        print("existaccount")
+    }
+    func re_home(){
+        print("home")
+    }
+    
+    
+    
+        
         
         
     }
