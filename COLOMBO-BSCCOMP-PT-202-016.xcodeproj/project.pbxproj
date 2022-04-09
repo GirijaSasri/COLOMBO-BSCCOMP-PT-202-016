@@ -29,6 +29,7 @@
 		52D6D6672800AE4B001808DA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D6662800AE4B001808DA /* LoginService.swift */; };
 		52D6D6692800B59A001808DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52D6D6682800B59A001808DA /* GoogleService-Info.plist */; };
 		52D6D66B2800B6C0001808DA /* AppTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */; };
+		52DFD20A28018DA0000505B0 /* SellerAdvertisementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFD20928018DA0000505B0 /* SellerAdvertisementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		52D6D6662800AE4B001808DA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		52D6D6682800B59A001808DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextFieldView.swift; sourceTree = "<group>"; };
+		52DFD20928018DA0000505B0 /* SellerAdvertisementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerAdvertisementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				5277189B27FEC49A0071B8D4 /* HomePageView.swift */,
 				52747AC62800060C00B34ABF /* HomeDeatilView.swift */,
 				525B2EF62801343700D7361A /* RegistrationView.swift */,
+				52DFD20928018DA0000505B0 /* SellerAdvertisementView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				525B2EF72801343700D7361A /* RegistrationView.swift in Sources */,
+				52DFD20A28018DA0000505B0 /* SellerAdvertisementView.swift in Sources */,
 				52744C2827FA1C5C00289F6F /* LoginView.swift in Sources */,
 				52744C3227FA258C00289F6F /* RegisterViewModel.swift in Sources */,
 				52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */,
