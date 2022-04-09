@@ -1,0 +1,34 @@
+//
+//  RegistrationService.swift
+//  COLOMBO-BSCCOMP-PT-202-016
+//
+//  Created by Sasri on 2022-04-09.
+//
+
+
+
+import Foundation
+import Firebase
+
+
+protocol RegisterServiceProtocol {
+    
+    func userRegistration(
+       email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
+    
+}
+
+class RegisterService: RegisterServiceProtocol {
+    let auth = Auth.auth()
+    
+    func userRegistration( email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        auth.createUser(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                completion(.failure(error!))
+            } else {
+                completion(.success(()))
+            }
+        }
+    }
+    
+}

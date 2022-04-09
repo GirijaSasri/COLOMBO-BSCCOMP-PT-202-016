@@ -22,13 +22,14 @@ struct RegistrationView: View {
     @State private var retype_password = ""
     @State private var geolocation = ""
     
-    
+    @StateObject var registerViewModel = RegisterViewModel()
     
     var body: some View {
         
         NavigationView {
             
         Form{
+            
                 
             Section(header:Text("Basic Infomation"))
                 {
@@ -51,6 +52,8 @@ struct RegistrationView: View {
                      
                 
                 }
+               
+                
             Section(header:Text("Account Infomation")){
                 
                 TextField("Email",text: $email)
@@ -64,7 +67,7 @@ struct RegistrationView: View {
                 
                 
                 
-                
+                   
             }
             Button(action:{},label:{
                
@@ -73,8 +76,8 @@ struct RegistrationView: View {
                     Text("Create")
                          .fontWeight(.heavy)
                          .foregroundColor(.black)
+                         .frame(width:UIScreen.main.bounds.width-70)
                          .padding(.vertical)
-                         .frame(width:UIScreen.main.bounds.width - 150)
                          .background(Color("button"))
                          .clipShape(Capsule())
                     
@@ -83,24 +86,31 @@ struct RegistrationView: View {
                 
             })
           
-            
+                
             
             }
+            
             .accentColor(.blue)
+
             .navigationTitle("Sign Up")
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarTrailing){
                     Button("Login", action: existaccount)
                        
                     Button("Home", action: re_home)
+                        .foregroundColor(Color.red)
                    
                 }
+                
             }
             
-          }
-          
             
+          }
+       
+//        .background(Color(red: 32/255, green: 32/255, blue: 32/255))
+       
         }
+       
     func existaccount(){
         print("existaccount")
     }
@@ -111,7 +121,7 @@ struct RegistrationView: View {
     
     
         
-        
+ 
         
     }
 

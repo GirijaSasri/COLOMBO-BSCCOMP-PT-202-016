@@ -26,6 +26,8 @@
 		52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C3327FA25B100289F6F /* HomeViewModel.swift */; };
 		52747AC72800060C00B34ABF /* HomeDeatilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52747AC62800060C00B34ABF /* HomeDeatilView.swift */; };
 		5277189C27FEC49A0071B8D4 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277189B27FEC49A0071B8D4 /* HomePageView.swift */; };
+		5283246F2802194E0099358E /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283246E2802194E0099358E /* LocationViewModel.swift */; };
+		52832471280220330099358E /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52832470280220330099358E /* RegistrationService.swift */; };
 		528FA4192801C38500106C81 /* SettingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528FA4182801C38500106C81 /* SettingPageView.swift */; };
 		52D6D6672800AE4B001808DA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D6662800AE4B001808DA /* LoginService.swift */; };
 		52D6D6692800B59A001808DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52D6D6682800B59A001808DA /* GoogleService-Info.plist */; };
@@ -69,6 +71,8 @@
 		52744C3327FA25B100289F6F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		52747AC62800060C00B34ABF /* HomeDeatilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDeatilView.swift; sourceTree = "<group>"; };
 		5277189B27FEC49A0071B8D4 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		5283246E2802194E0099358E /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		52832470280220330099358E /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		528FA4182801C38500106C81 /* SettingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageView.swift; sourceTree = "<group>"; };
 		52D6D6662800AE4B001808DA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		52D6D6682800B59A001808DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				52744C2F27FA256600289F6F /* LoginViewModel.swift */,
 				52744C3127FA258C00289F6F /* RegisterViewModel.swift */,
 				52744C3327FA25B100289F6F /* HomeViewModel.swift */,
+				5283246E2802194E0099358E /* LocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				52D6D6662800AE4B001808DA /* LoginService.swift */,
+				52832470280220330099358E /* RegistrationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				525B2EF72801343700D7361A /* RegistrationView.swift in Sources */,
+				52832471280220330099358E /* RegistrationService.swift in Sources */,
 				52DFD20A28018DA0000505B0 /* SellerAdvertisementView.swift in Sources */,
 				52744C2827FA1C5C00289F6F /* LoginView.swift in Sources */,
 				528FA4192801C38500106C81 /* SettingPageView.swift in Sources */,
@@ -366,6 +373,7 @@
 				52747AC72800060C00B34ABF /* HomeDeatilView.swift in Sources */,
 				52744BF027F9F0C200289F6F /* ContentView.swift in Sources */,
 				52D6D6672800AE4B001808DA /* LoginService.swift in Sources */,
+				5283246F2802194E0099358E /* LocationViewModel.swift in Sources */,
 				5277189C27FEC49A0071B8D4 /* HomePageView.swift in Sources */,
 				52744BEE27F9F0C200289F6F /* COLOMBO_BSCCOMP_PT_202_016App.swift in Sources */,
 			);
