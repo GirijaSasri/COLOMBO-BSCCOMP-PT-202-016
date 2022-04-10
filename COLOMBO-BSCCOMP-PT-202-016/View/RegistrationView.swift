@@ -70,7 +70,7 @@ struct RegistrationView: View {
                    
             }
             Button(action:{
-                rgViewModule.register(email: email, password: password,name: name)
+                rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number)
             },label:{
                
                
