@@ -14,22 +14,16 @@ struct HomePageView: View {
     var body: some View {
         
         
+        
+        
         VStack {
             HomelayoutView()
         }
     //navigation bar
-//        HStack{
-//            Button(action:{},label: {
-//                Image("HomeIcon")
-//                    .frame(maxWidth: .infinity)
-//            })
-//        }
-//        .padding()
-//        .background(Color.white)
-//        .clipShape(Capsule())
-//        .padding()
+
 
     }
+    
 }
 
 struct HomePageView_Previews: PreviewProvider {
@@ -74,6 +68,7 @@ struct TagLingView: View {
     }
 }
 
+
 struct LandSeacrhView: View {
     @State private var search: String = ""
     var body: some View {
@@ -88,11 +83,7 @@ struct LandSeacrhView: View {
             .cornerRadius(10.0)
             .padding(.trailing)
             
-            
-            Image("ScanIcon")
-                .padding()
-                .background(Color("HomePageText"))
-                .cornerRadius(10.0)
+
             
         }
         .padding(.horizontal)
