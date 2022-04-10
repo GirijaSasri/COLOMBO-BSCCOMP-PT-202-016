@@ -23,6 +23,7 @@ struct SellerAdvertisementView: View {
     var body: some View {
         NavigationView{
         Form{
+            
             Section(header:Text("Advertisement Infomation"))
             {
                 TextField("Title",text: $title)
@@ -43,8 +44,10 @@ struct SellerAdvertisementView: View {
                                     }
                                 }
                 }
+                
             }
-            Section(header:Text("Advertisement Infomation"))
+            
+            Section(header:Text("Mandatory Infomation"))
             {
                 TextField("Geo Location",text: $cageolocation)
                 TextField("Property Image",text: $propertyimage)
@@ -57,35 +60,50 @@ struct SellerAdvertisementView: View {
                
          
                     Text("Create")
-                         .fontWeight(.heavy)
-                         .foregroundColor(.black)
-                         .padding(.vertical)
-                         .frame(width:UIScreen.main.bounds.width - 150)
-                         .background(Color("button"))
-                         .clipShape(Capsule())
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .frame(width:UIScreen.main.bounds.width-70)
+                    .padding(.vertical)
+                    .background(Color("button"))
+                    .clipShape(Capsule())
                     
                
                 
                 
             })
             
+            
        }
         .accentColor(.blue)
-        .navigationTitle("Create Advertisement")
+        .navigationTitle("Create AD")
+        .toolbar{
+            Button("Home",action: home)
+            .foregroundColor(Color.red)
+           
+        }
+        
+           
         
             
             
           
     }
-     
         
+        
+      
 //
         
 }
+    func home()
+    {
+        print("Back")
+    }
 
 struct SellerAdvertisementView_Previews: PreviewProvider {
     static var previews: some View {
         SellerAdvertisementView()
+        
     }
+    
 }
 }

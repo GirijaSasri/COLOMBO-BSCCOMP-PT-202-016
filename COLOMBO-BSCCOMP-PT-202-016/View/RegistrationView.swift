@@ -11,7 +11,7 @@ struct RegistrationView: View {
     @State private var nic_number = ""
     @State private var dob = Date()
     
-    @State var selectedGender = 0
+    @State private var selectedGender = 0
     let genders = ["Male", "Female"]
     
     @State private var name = ""
@@ -70,7 +70,7 @@ struct RegistrationView: View {
                    
             }
             Button(action:{
-                rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number)
+                rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender)
             },label:{
                
                

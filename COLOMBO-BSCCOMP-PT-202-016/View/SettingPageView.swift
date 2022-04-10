@@ -68,13 +68,13 @@ struct SettingPageView: View {
               
               
         
-                   Text("Create")
-                        .fontWeight(.heavy)
-                        .foregroundColor(.black)
-                        .padding(.vertical)
-                        .frame(width:UIScreen.main.bounds.width - 150)
-                        .background(Color("button"))
-                        .clipShape(Capsule())
+                   Text("Save")
+                   .fontWeight(.heavy)
+                   .foregroundColor(.black)
+                   .frame(width:UIScreen.main.bounds.width-70)
+                   .padding(.vertical)
+                   .background(Color("button"))
+                   .clipShape(Capsule())
                    
               
                
@@ -86,10 +86,19 @@ struct SettingPageView: View {
            }
            .accentColor(.blue)
            .navigationTitle("Settings page")
+           .toolbar{
+               Button("Home",action: home)
+               .foregroundColor(Color.red)
+              
+           }
  
            
          }
     }
+}
+func home()
+{
+    print("Back")
 }
 
 struct SettingPageView_Previews: PreviewProvider {
