@@ -7,20 +7,21 @@
 
 import SwiftUI
 
+
 struct HomePageView: View {
     
   
     
     var body: some View {
         
-        
-        
-        
+      
         VStack {
-            HomelayoutView()
+            navbarsection()
         }
     //navigation bar
-
+     
+        
+       
 
     }
     
@@ -60,11 +61,11 @@ struct TagLingView: View {
         Text("Find The \nbest ")
             .fontWeight(.light)
             .font(.title)
-            .foregroundColor(Color("HomePageText"))
+            .foregroundColor(Color("black"))
         + Text("Property!")
             .fontWeight(.bold)
             .font(.title)
-            .foregroundColor(Color("HomePageText"))
+            .foregroundColor(Color("black"))
     }
 }
 
@@ -181,6 +182,39 @@ struct HomelayoutView: View {
                     
                 }
             }
+        }
+    }
+}
+
+struct navigationbar: View {
+    let barimage:Image
+    let action:()->Void
+    var body: some View {
+        Button(action:action, label: {
+            barimage
+                .frame(maxWidth:.infinity)
+        })
+    }
+}
+
+struct navbarsection: View {
+    var body: some View {
+        VStack {
+            HomelayoutView()
+            HStack{
+                navigationbar(barimage:Image("HomeIcon")){}
+                navigationbar(barimage:Image("adsIcon")){}
+                navigationbar(barimage:Image("SettingIcon")){}
+                navigationbar(barimage:Image("LogoutIcon"))
+                {
+                    
+                    
+                }
+                
+            }
+            .padding()
+            .background(Color.white)
+            .frame(alignment: .bottom)
         }
     }
 }
