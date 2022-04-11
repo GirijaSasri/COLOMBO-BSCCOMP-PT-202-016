@@ -12,9 +12,8 @@ struct HomeDeatilView: View {
         VStack{
             PricebarView()
         }
-
+       }
     }
-}
 
 struct HomeDeatilView_Previews: PreviewProvider {
     static var previews: some View {
@@ -94,7 +93,9 @@ struct DetailView: View {
         .padding(.top)
         .background(Color("HomePageBackgroud"))
         .cornerRadius(40.0)
+        
     }
+  
 }
 
 struct PricebarView: View {
@@ -124,7 +125,7 @@ struct PricebarView: View {
                 
                 Button(action:{},label:{
                     
-                    Text("Chat")
+                    Text("Home")
                         .padding()
                         .padding(.horizontal)
                         .background(Color.white)
