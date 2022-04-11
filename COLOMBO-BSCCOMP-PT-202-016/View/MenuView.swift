@@ -16,9 +16,9 @@ struct MenuView: View {
                     .foregroundColor(.gray)
                     .imageScale(.large)
                 
-                Text("ome PAge")
+                Text("Home Page")
                     .foregroundColor(.black)
-                    .font(.headline)
+                    .font(.title3)
                 
             }
             .padding(.top,105)
@@ -29,10 +29,10 @@ struct MenuView: View {
                 
                 Text("Seller Advertisement")
                     .foregroundColor(.black)
-                    .font(.headline)
+                    .font(.title3)
                 
             }
-            .padding(.top,105)
+            .padding(.top,35)
             HStack{
                 Image( "SettingIcon")
                     .foregroundColor(.gray)
@@ -40,13 +40,29 @@ struct MenuView: View {
                 
                 Text("Settings Page")
                     .foregroundColor(.black)
-                    .font(.headline)
+                    .font(.title3)
                 
             }
-            .padding(.top,105)
+            .padding(.top,35)
+//            Spacer()
             
+            HStack{
+                Image( "LogoutIcon")
+                    .foregroundColor(.gray)
+                    .imageScale(.large)
+                
+                Text("Logout")
+                    .foregroundColor(.black)
+                    .font(.title3)
+                
+            }
+            .padding(.top,35)
+            Spacer()
         }
-        
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color("HomePageBackgroud"))
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
