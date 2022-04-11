@@ -34,7 +34,9 @@ struct RegistrationView: View {
             Section(header:Text("Basic Infomation"))
                 {
                     TextField("NIC Number",text: $nic_number)
+                   
                     DatePicker("Birthday",selection: $dob,displayedComponents: .date)
+                   
                     HStack {
                         Text("Gender")
                         Picker("", selection: $selectedGender) {
@@ -45,7 +47,10 @@ struct RegistrationView: View {
                         }.pickerStyle(SegmentedPickerStyle())
                         
                     }
+                   
                     TextField("Name",text: $name)
+                        .keyboardType(.alphabet)
+                        .autocapitalization(.none)
                     
                     TextField("Mobile",text: $mobile)
                         .keyboardType(.numberPad)
@@ -57,7 +62,9 @@ struct RegistrationView: View {
             Section(header:Text("Account Infomation")){
                 
                 TextField("Email",text: $email)
+                    .keyboardType(.emailAddress)
                     .autocapitalization(.none)
+                
                 
                 SecureField("Password", text: $password)
                 

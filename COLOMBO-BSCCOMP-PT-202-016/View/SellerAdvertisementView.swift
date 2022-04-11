@@ -27,7 +27,12 @@ struct SellerAdvertisementView: View {
             Section(header:Text("Advertisement Infomation"))
             {
                 TextField("Title",text: $title)
+                    .keyboardType(.alphabet)
+                    .autocapitalization(.none)
+
                 TextField("Price",text: $price)
+                    .keyboardType(.numberPad)
+
                 VStack{
                     Picker(selection: $landhouse, label: Text("Land / House")) {
                                     ForEach(0 ..< types.count) {
@@ -36,7 +41,11 @@ struct SellerAdvertisementView: View {
                                 }
                 }
                 TextField("Land Size",text: $size)
+                    .keyboardType(.numberPad)
+
                 TextField("District",text: $district)
+                    .keyboardType(.alphabet)
+                    .autocapitalization(.none)
                 VStack{
                     Picker(selection: $townvillage, label: Text("Town / Village")) {
                                     ForEach(0 ..< parts.count) {

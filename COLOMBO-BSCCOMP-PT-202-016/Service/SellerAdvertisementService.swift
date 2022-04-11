@@ -1,12 +1,17 @@
 //
+//
+//
+//
+//
 //import Foundation
 //import Firebase
 //
 //
 //    protocol SellerAdvertisementProtocol {
 //        
-//        func sellerscreate(title:String,completion: @escaping (Result<Void, Error>) -> Void)
-//        
+//        func sellerscreate(email: String,password : String,title:String,completion: @escaping (Result<Void, Error>) -> Void)
+//   
+//       
 //    }
 //
 //

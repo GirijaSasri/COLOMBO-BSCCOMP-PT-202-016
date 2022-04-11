@@ -41,8 +41,11 @@ struct SettingPageView: View {
                        
                    }
                    TextField("Name",text: $name)
+                       .keyboardType(.alphabet)
+                       .autocapitalization(.none)
                    
                    TextField("Email",text: $email)
+                       .keyboardType(.emailAddress)
                        .autocapitalization(.none)
                    
                
