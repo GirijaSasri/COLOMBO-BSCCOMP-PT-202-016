@@ -24,6 +24,8 @@ struct RegistrationView: View {
     
     @StateObject var rgViewModule = RegisterViewModel()
     
+    @State private var showAlert = false
+    
     var body: some View {
         
         NavigationView {
@@ -68,6 +70,7 @@ struct RegistrationView: View {
                 
                 SecureField("Password", text: $password)
                 
+                
                 SecureField("Retype Password", text: $retype_password)
                 // showed be removed from the location
                 TextField("Geo Location",text: $geolocation)
@@ -76,8 +79,11 @@ struct RegistrationView: View {
                 
                    
             }
+            
             Button(action:{
                 rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender)
+                showAlert = true
+                
             },label:{
                
                
@@ -113,6 +119,13 @@ struct RegistrationView: View {
                 
             }
             
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Current Location Not Available"),
+                    message: Text("Your current location can’t be " +
+                                    "determined at this time.")
+                )
+            }
             
           }
        

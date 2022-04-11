@@ -39,9 +39,12 @@ class RegisterService: RegisterServiceProtocol {
 //                    "statusTime": Timestamp(date: Date())
                 ]) { err in
                     if let err = err {
-                        print("Error writing document: \(err)")
+                        print("Error \(err)")
+                        completion(.failure(err))
+                      
                     } else {
-                        
+                        print("Success")
+                        completion(.success(()))
                     }
                 }
             }
