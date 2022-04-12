@@ -22,7 +22,7 @@ struct AppTextFieldView: View {
                .keyboardType(keyboard)
         }
                .padding()
-               .background(Color.white.opacity(0.12))
+               .background(Color.white.opacity(0.50))
                .cornerRadius(15)
                .padding(.horizontal)
     }

@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State var username=""
     @State var password=""
+    @State private var showAlert = false
    
     @StateObject var loginViewModel = LoginViewModel()
     var body: some View {
@@ -49,6 +50,9 @@ struct LoginView: View {
 //                    .padding(.horizontal)
                 
             AppTextFieldView(name: "Username", value: $username)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+                
                     
                     
             HStack{
@@ -56,12 +60,14 @@ struct LoginView: View {
                 SecureField("Password", text: $password)
 //                  .padding(.all)
                     .font(.title2)
+
                     .foregroundColor(.white)
-                    
+                    .autocapitalization(.none)
+              
                 
                 }
                     .padding()
-                    .background(Color.white.opacity(0.12))
+                    .background(Color.white.opacity(0.50))
                     .cornerRadius(15)
                     .padding(.horizontal)
          
@@ -100,7 +106,7 @@ struct LoginView: View {
                     Text("Don't have a account")
                         .foregroundColor(Color.white.opacity(0.6))
                  
-                    Button(action:{},label:{
+                    Button(action:{showAlert = true},label:{
                         Text("Signup")
                             .fontWeight(.heavy)
                             .foregroundColor(Color("button"))
@@ -113,11 +119,35 @@ struct LoginView: View {
                
               }
             .background(Color("AppTextColor").ignoresSafeArea(.all,edges: .all))
-        
+            .toolbar{
+                ToolbarItemGroup(placement: .navigationBarTrailing){
+                  
+                       
+                    Button("Terms & Policy ", action: re_home)
+                        .foregroundColor(Color.red)
+                   
+                }
+                
+            }
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Current Location Not Available"),
+                    message: Text("Your current location can’t be " +
+                                    "determined at this time.")
+                )
+            }
+     
         
         }
+   
+    
+        
+        
         
        
+    }
+    func re_home(){
+        print("home")
     }
 }
 

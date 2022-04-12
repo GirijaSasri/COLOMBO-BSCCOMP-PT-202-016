@@ -22,6 +22,7 @@ struct SellerAdvertisementView: View {
     
     @StateObject var sellerViewModule = SellerViewModel()
     
+    @State private var showAlert = false
     var body: some View {
         NavigationView{
         Form{
@@ -68,7 +69,8 @@ struct SellerAdvertisementView: View {
             
             Button(action:{
                 sellerViewModule.Seller(title:title,price: price,landhouse:landhouse,size:size,district:district,townvillage:townvillage)
-                
+               
+                showAlert = true
             },label:{
                
                
@@ -96,6 +98,13 @@ struct SellerAdvertisementView: View {
            
         }
         
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Ad Created Sucess"),
+                message: Text("Sucessfull " +
+                                "determined at this time.")
+            )
+        }
            
         
             

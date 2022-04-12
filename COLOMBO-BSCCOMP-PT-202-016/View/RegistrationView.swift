@@ -121,8 +121,8 @@ struct RegistrationView: View {
             
             .alert(isPresented: $showAlert) {
                 Alert(
-                    title: Text("Current Location Not Available"),
-                    message: Text("Your current location can’t be " +
+                    title: Text("Restration Sucess"),
+                    message: Text("Sucessfull " +
                                     "determined at this time.")
                 )
             }
