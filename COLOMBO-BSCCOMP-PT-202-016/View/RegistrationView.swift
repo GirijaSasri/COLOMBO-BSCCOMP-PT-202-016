@@ -26,6 +26,8 @@ struct RegistrationView: View {
     
     @State private var showAlert = false
     
+    @StateObject var  locationViewModule = LocationViewModule()
+    
     var body: some View {
         
         NavigationView {
@@ -73,15 +75,24 @@ struct RegistrationView: View {
                 
                 SecureField("Retype Password", text: $retype_password)
                 // showed be removed from the location
-                TextField("Geo Location",text: $geolocation)
+              
                 
+//                TextField("Geo Location",text: $geolocation)
+                Button(locationViewModule.location == nil ? "Geo Location" : "Update Location", action: {
+                    locationViewModule.checkLocationServiceEnabledInDevice()
+                })
                 
                 
                    
             }
             
             Button(action:{
-                rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender)
+                if password != retype_password {
+                    
+                } else {
+                    
+                }
+                rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender )
                 showAlert = true
                 
             },label:{
