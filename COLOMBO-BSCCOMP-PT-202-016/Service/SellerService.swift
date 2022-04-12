@@ -12,7 +12,7 @@ import Firebase
 protocol SellerServiceProtocol {
     
     func userSeller(
-        email: String, password: String,name:String,nic_number:String,mobile:String,dob:Date,selectedGender:Int,completion: @escaping (Result<Void, Error>) -> Void)
+        title: String,price: String,landhouse: Int,size:String,district:String,townvillage:Int,completion: @escaping (Result<Void, Error>) -> Void)
     
 }
 
@@ -20,16 +20,17 @@ protocol SellerServiceProtocol {
 class SellerService: SellerServiceProtocol {
     let auth = Auth.auth()
     
-    func userSeller( email: String, password: String,name: String,nic_number: String,mobile: String ,dob: Date,selectedGender:Int,completion: @escaping (Result<Void, Error>) -> Void) {
+    func userSeller( title: String,price: String,landhouse: Int,size:String,district:String,townvillage:Int,completion: @escaping (Result<Void, Error>) -> Void) {
       
         guard let userID = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("advertisment").document().setData([
+        Firestore.firestore().collection("advertisement").document().setData([
             "userID": userID,
-            "email": email,
-            "nic_number": nic_number,
-            "mobile": mobile,
-            "dob":dob,
-            "selectedGender":selectedGender
+            "title": title,
+            "price": price,
+            "landhouse": landhouse,
+            "size": size,
+            "district":district,
+            "townvillage":townvillage,
 //                    "status": "active",
 //                    "statusTime": Timestamp(date: Date())
         ]) { err in

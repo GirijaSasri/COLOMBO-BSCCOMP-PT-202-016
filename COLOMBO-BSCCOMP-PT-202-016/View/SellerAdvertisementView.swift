@@ -20,6 +20,8 @@ struct SellerAdvertisementView: View {
     @State private var cageolocation = ""
     @State private var deedimage = ""
     
+    @StateObject var sellerViewModule = SellerViewModel()
+    
     var body: some View {
         NavigationView{
         Form{
@@ -64,7 +66,10 @@ struct SellerAdvertisementView: View {
             }
             
             
-            Button(action:{},label:{
+            Button(action:{
+                sellerViewModule.Seller(title:title,price: price,landhouse:landhouse,size:size,district:district,townvillage:townvillage)
+                
+            },label:{
                
                
          

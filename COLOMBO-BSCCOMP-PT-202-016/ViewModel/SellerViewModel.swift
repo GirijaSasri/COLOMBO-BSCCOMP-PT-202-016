@@ -19,9 +19,9 @@ class SellerViewModel: ObservableObject
     }
    
     
-    func Seller(email:String,password:String,name:String,nic_number:String,mobile:String,dob:Date,selectedGender:Int)
+    func Seller(title:String,price:String,landhouse:Int,size:String,district:String,townvillage:Int)
     {
-        sellerService.userSeller(email: email, password: password,name: name,nic_number: nic_number,mobile: mobile,dob: dob,selectedGender:selectedGender) { result in
+        sellerService.userSeller(title: title, price: price, landhouse: landhouse,size: size,district: district,townvillage:townvillage) { result in
                     switch result {
                     case .success:
                         print(result)
