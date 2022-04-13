@@ -34,8 +34,8 @@ class RegisterService: RegisterServiceProtocol {
                     "nic_number": nic_number,
                     "mobile": mobile,
                     "dob":dob,
-                    "selectedGender":selectedGender
-//                    "status": "active",
+                    "selectedGender":selectedGender,
+//                    "CLLocation": CLLocation
 //                    "statusTime": Timestamp(date: Date())
                 ]) { err in
                     if let err = err {

@@ -1,20 +1,43 @@
+////
+////  ForgetPasswordView.swift
+////  COLOMBO-BSCCOMP-PT-202-016
+////
+////  Created by Sasri on 2022-04-13.
+////
 //
-//  ForgetPasswordView.swift
-//  COLOMBO-BSCCOMP-PT-202-016
+//import SwiftUI
 //
-//  Created by Sasri on 2022-04-08.
+//struct ForgetPasswordView: View {
 //
-
-import SwiftUI
-
-struct ForgetPasswordView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ForgetPasswordView_Previews: PreviewProvider {
-    static var previews: some View {
-        ForgetPasswordView()
-    }
-}
+//    @Environment(\.presentationMode) var presentationMode
+//    @StateObject private var vm = ForgetPasswordViewModelImp()
+//        service: ForgetPasswordServiceImpl()
+//
+//    var body: some View {
+//
+//        NavigationView {
+//
+//            VStack(spacing:14)
+//            {
+//            InputTextFieldView(text: $vm.email,
+//                placeholder:"Email",
+//                keyboardType: .emailAddress)
+//
+//                ButtonView(title: "Send Password Reset"){
+//                    vm.sendPasswordReset()
+//                    presentationMode.wrappedValue.dismiss()
+//
+//                }
+//          }
+//            .padding(.horizontal,15)
+//            .navigationBarTitle("Reset password")
+//            .applyClose()
+//        }
+//    }
+//}
+//
+//struct ForgetPasswordView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ForgetPasswordView()
+//    }
+//}

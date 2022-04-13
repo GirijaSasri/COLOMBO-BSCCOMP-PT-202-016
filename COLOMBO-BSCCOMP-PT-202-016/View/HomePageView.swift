@@ -72,18 +72,34 @@ struct TagLingView: View {
 
 struct LandSeacrhView: View {
     @State private var search: String = ""
+    
+    @State private var selection = "Districts"
+    let districts = ["Colombo", "Ampara", "Anuradhapura", "Badulla", "Batticalo"]
+
+    
     var body: some View {
         HStack{
-            HStack {
-                Image("SearchIcon")
-                    .padding(.trailing,8)
-                TextField("Search Property",text: $search)
-            }
-            .padding(.all,20)
-            .background(Color.white)
-            .cornerRadius(10.0)
-            .padding(.trailing)
             
+            VStack {
+                       Picker("Select A District", selection: $selection) {
+                           ForEach(districts, id: \.self) {
+                               Text($0)
+                           }
+                       }
+                       .pickerStyle(.menu)
+
+                   }
+            
+//            HStack {
+//                Image("SearchIcon")
+//                    .padding(.trailing,8)
+//                TextField("Search Property",text: $search)
+//            }
+//            .padding(.all,20)
+//            .background(Color.white)
+//            .cornerRadius(10.0)
+//            .padding(.trailing)
+//
 
             
         }
@@ -106,10 +122,10 @@ struct ItemCardView: View {
                 .fontWeight(.bold)
             
             HStack(spacing: 2){
-                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                    Image("StarIcon")
-                }
-                Spacer()
+//                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+//                    Image("StarIcon")
+//                }
+//                Spacer()
                 
                 Text("RS50000")
                     .font(.title3)
@@ -198,23 +214,31 @@ struct navigationbar: View {
 }
 
 struct navbarsection: View {
+
     var body: some View {
         VStack {
             HomelayoutView()
-            HStack{
-                navigationbar(barimage:Image("HomeIcon")){}
-                navigationbar(barimage:Image("adsIcon")){}
-                navigationbar(barimage:Image("SettingIcon")){}
-                navigationbar(barimage:Image("LogoutIcon"))
-                {
-                    
-                    
-                }
-                
-            }
-            .padding()
-            .background(Color.white)
-            .frame(alignment: .bottom)
+            
+        
+            
+                HStack{
+                   
+                            navigationbar(barimage:Image("HomeIcon")){}
+                            navigationbar(barimage:Image("adsIcon")){}
+                            navigationbar(barimage:Image("SettingIcon")){}
+                            navigationbar(barimage:Image("LogoutIcon"))
+                            {
+                                
+                                
+                            }
+                            
+                        }
+                        .padding()
+                        .background(Color.white)
+                    .frame(alignment: .bottom)
+            
+            
+            
         }
     }
 }

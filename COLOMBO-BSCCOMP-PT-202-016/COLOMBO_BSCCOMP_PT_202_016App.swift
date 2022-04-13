@@ -14,10 +14,10 @@ struct COLOMBO_BSCCOMP_PT_202_016App: App {
     {
         FirebaseApp.configure()
     }
-
+    
     var body: some Scene {
         WindowGroup {
-            RegistrationView()
+            HomePageView()
         }
     }
 }

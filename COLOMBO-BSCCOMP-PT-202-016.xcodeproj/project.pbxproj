@@ -29,6 +29,9 @@
 		5283246F2802194E0099358E /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283246E2802194E0099358E /* LocationViewModel.swift */; };
 		52832471280220330099358E /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52832470280220330099358E /* RegistrationService.swift */; };
 		528FA4192801C38500106C81 /* SettingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528FA4182801C38500106C81 /* SettingPageView.swift */; };
+		5294635E2806B91F009391FA /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5294635D2806B91F009391FA /* ForgetPasswordView.swift */; };
+		529463602806BC8B009391FA /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5294635F2806BC8B009391FA /* ForgotPasswordService.swift */; };
+		529463622806C2DF009391FA /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529463612806C2DF009391FA /* ForgotPasswordViewModel.swift */; };
 		52981BB3280410B8004B901A /* SettingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52981BB2280410B8004B901A /* SettingService.swift */; };
 		52981BB5280410E2004B901A /* SettingsViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52981BB4280410E2004B901A /* SettingsViewModule.swift */; };
 		52981BB7280414CA004B901A /* SellerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52981BB6280414CA004B901A /* SellerService.swift */; };
@@ -79,6 +82,9 @@
 		5283246E2802194E0099358E /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		52832470280220330099358E /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		528FA4182801C38500106C81 /* SettingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageView.swift; sourceTree = "<group>"; };
+		5294635D2806B91F009391FA /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
+		5294635F2806BC8B009391FA /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordService.swift; sourceTree = "<group>"; };
+		529463612806C2DF009391FA /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		52981BB2280410B8004B901A /* SettingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingService.swift; sourceTree = "<group>"; };
 		52981BB4280410E2004B901A /* SettingsViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModule.swift; sourceTree = "<group>"; };
 		52981BB6280414CA004B901A /* SellerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerService.swift; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 				52DFD20928018DA0000505B0 /* SellerAdvertisementView.swift */,
 				528FA4182801C38500106C81 /* SettingPageView.swift */,
 				52AF07232803136900CDE634 /* MenuView.swift */,
+				5294635D2806B91F009391FA /* ForgetPasswordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +212,7 @@
 				5283246E2802194E0099358E /* LocationViewModel.swift */,
 				52981BB4280410E2004B901A /* SettingsViewModule.swift */,
 				52981BB82804160D004B901A /* SellerViewModel.swift */,
+				529463612806C2DF009391FA /* ForgotPasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 				52832470280220330099358E /* RegistrationService.swift */,
 				52981BB2280410B8004B901A /* SettingService.swift */,
 				52981BB6280414CA004B901A /* SellerService.swift */,
+				5294635F2806BC8B009391FA /* ForgotPasswordService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -386,6 +395,8 @@
 				52981BB92804160D004B901A /* SellerViewModel.swift in Sources */,
 				52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */,
 				52D6D66B2800B6C0001808DA /* AppTextFieldView.swift in Sources */,
+				5294635E2806B91F009391FA /* ForgetPasswordView.swift in Sources */,
+				529463602806BC8B009391FA /* ForgotPasswordService.swift in Sources */,
 				52744C3027FA256600289F6F /* LoginViewModel.swift in Sources */,
 				52747AC72800060C00B34ABF /* HomeDeatilView.swift in Sources */,
 				52981BB3280410B8004B901A /* SettingService.swift in Sources */,
@@ -393,6 +404,7 @@
 				52981BB5280410E2004B901A /* SettingsViewModule.swift in Sources */,
 				52D6D6672800AE4B001808DA /* LoginService.swift in Sources */,
 				52AF07242803136900CDE634 /* MenuView.swift in Sources */,
+				529463622806C2DF009391FA /* ForgotPasswordViewModel.swift in Sources */,
 				5283246F2802194E0099358E /* LocationViewModel.swift in Sources */,
 				5277189C27FEC49A0071B8D4 /* HomePageView.swift in Sources */,
 				52744BEE27F9F0C200289F6F /* COLOMBO_BSCCOMP_PT_202_016App.swift in Sources */,

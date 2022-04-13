@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State var username=""
     @State var password=""
-    @State private var showAlert = false
+  
    
     @StateObject var loginViewModel = LoginViewModel()
     var body: some View {
@@ -106,7 +106,7 @@ struct LoginView: View {
                     Text("Don't have a account")
                         .foregroundColor(Color.white.opacity(0.6))
                  
-                    Button(action:{showAlert = true},label:{
+                    Button(action:{},label:{
                         Text("Signup")
                             .fontWeight(.heavy)
                             .foregroundColor(Color("button"))
@@ -128,13 +128,6 @@ struct LoginView: View {
                    
                 }
                 
-            }
-            .alert(isPresented: $showAlert) {
-                Alert(
-                    title: Text("Current Location Not Available"),
-                    message: Text("Your current location can’t be " +
-                                    "determined at this time.")
-                )
             }
      
         

@@ -27,7 +27,9 @@ struct RegistrationView: View {
     @State private var showAlert = false
     
     @StateObject var  locationViewModule = LocationViewModule()
-    
+  
+  
+
     var body: some View {
         
         NavigationView {

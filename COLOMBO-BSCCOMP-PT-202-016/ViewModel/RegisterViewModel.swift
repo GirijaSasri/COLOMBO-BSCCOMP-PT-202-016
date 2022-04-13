@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import CoreLocation
 
 class RegisterViewModel: ObservableObject
 {
