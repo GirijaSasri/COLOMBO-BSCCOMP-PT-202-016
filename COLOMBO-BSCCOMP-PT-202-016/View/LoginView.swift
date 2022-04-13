@@ -11,6 +11,9 @@ struct LoginView: View {
     @State var username=""
     @State var password=""
   
+    
+    @State private var showAlert = false
+    @State private var error = ""
    
     @StateObject var loginViewModel = LoginViewModel()
     var body: some View {
@@ -75,7 +78,14 @@ struct LoginView: View {
             
             
             Button(action:{
-                loginViewModel.login(email: username, password: password)
+                if username.isEmpty {
+                    showAlert = true
+                    error = "pasword empty"
+                } else  {
+                    loginViewModel.login(email: username, password: password)
+                    
+                }
+                
             })
                {Text("Login")
                     .fontWeight(.heavy)
@@ -129,7 +139,13 @@ struct LoginView: View {
                 }
                 
             }
-     
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Restration Sucess"),
+                    message: Text(error)
+                )
+            }
+            
         
         }
    
