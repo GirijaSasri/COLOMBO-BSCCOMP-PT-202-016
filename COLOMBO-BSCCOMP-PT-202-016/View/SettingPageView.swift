@@ -21,6 +21,10 @@ struct SettingPageView: View {
     @State private var changepassword = ""
     @State private var changegeolocation = ""
     
+    
+    @State private var showAlert = false
+    @State private var error = ""
+    
     var body: some View {
    NavigationView{
        
@@ -67,7 +71,27 @@ struct SettingPageView: View {
                
                
            }
-           Button(action:{},label:{
+           Button(action:{
+               if mobile.isEmpty {
+                   showAlert = true
+                   error = "Mobile Number  Required"
+               }
+               else if self.mobile.count < 10 {
+                   showAlert = true
+                   error = "Mobile Number Should Consists With 10 Numbers"
+               }
+               
+               if changepassword.isEmpty {
+                   showAlert = true
+                   error = "Password Number  Required"
+               }
+               else if self.changepassword.count < 8 {
+                   showAlert = true
+                   error = "Password should be 8 character long"
+               }
+               
+               
+           },label:{
               
               
         
@@ -94,6 +118,13 @@ struct SettingPageView: View {
                .foregroundColor(Color.red)
               
            }
+           .alert(isPresented: $showAlert) {
+               Alert(
+                   title: Text("Setting Page Error"),
+                   message: Text(error)
+               )
+           }
+             
  
            
          }
