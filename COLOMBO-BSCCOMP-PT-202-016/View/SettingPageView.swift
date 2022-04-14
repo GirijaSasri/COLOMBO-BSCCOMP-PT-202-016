@@ -93,8 +93,8 @@ struct SettingPageView: View {
                
            },label:{
               
-              
-        
+               
+               
                    Text("Save")
                    .fontWeight(.heavy)
                    .foregroundColor(.black)
@@ -114,9 +114,13 @@ struct SettingPageView: View {
            .accentColor(.blue)
            .navigationTitle("Settings page")
            .toolbar{
+            
+             
                Button("Home",action: home)
                .foregroundColor(Color.red)
-              
+               
+           
+            
            }
            .alert(isPresented: $showAlert) {
                Alert(
@@ -132,7 +136,9 @@ struct SettingPageView: View {
 }
 func home()
 {
+    
     print("Back")
+
 }
 
 struct SettingPageView_Previews: PreviewProvider {

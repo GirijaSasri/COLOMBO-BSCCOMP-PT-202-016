@@ -106,8 +106,13 @@ struct LoginView: View {
                     loginViewModel.login(email: username, password: password)
                     
                 }
-                
-            })
+            
+            }
+                   
+                   
+                   
+            
+            )
                {Text("Login")
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
