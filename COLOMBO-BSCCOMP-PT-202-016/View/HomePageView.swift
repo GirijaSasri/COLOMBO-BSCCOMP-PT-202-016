@@ -222,15 +222,11 @@ struct navbarsection: View {
         
             
                 HStack{
-                   
+                    
                             navigationbar(barimage:Image("HomeIcon")){}
                             navigationbar(barimage:Image("adsIcon")){}
-                            navigationbar(barimage:Image("SettingIcon")){}
-                            navigationbar(barimage:Image("LogoutIcon"))
-                            {
-                                
-                                
-                            }
+                            navigationbar(barimage:Image("settingIcon")){}
+                            navigationbar(barimage:Image("LogoutIcon")){}
                             
                         }
                         .padding()

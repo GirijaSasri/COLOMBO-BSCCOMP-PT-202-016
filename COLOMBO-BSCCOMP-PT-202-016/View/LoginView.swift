@@ -116,12 +116,14 @@ struct LoginView: View {
                     .background(Color("button"))
                     .clipShape(Capsule())
                }
+               
         
 //            .padding()
 //            .background(Color(red: 0, green: 0, blue: 0.5))
 //            .clipShape(Capsule())
                 
                 Button(action:{},label:{
+                    
                     
                     Text("Forget Password?")
                         .foregroundColor(Color("button"))
@@ -137,12 +139,16 @@ struct LoginView: View {
                     Text("Don't have a account")
                         .foregroundColor(Color.white.opacity(0.6))
                  
+                   
                     Button(action:{},label:{
+                        NavigationLink(destination: RegistrationView()) {
                         Text("Signup")
                             .fontWeight(.heavy)
                             .foregroundColor(Color("button"))
+                        }
                         
                     })
+                    
                     
                     
                 }
