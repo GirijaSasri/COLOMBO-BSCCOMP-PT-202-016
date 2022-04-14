@@ -23,6 +23,8 @@ struct SellerAdvertisementView: View {
     @StateObject var sellerViewModule = SellerViewModel()
     
     @State private var showAlert = false
+    @State private var error = ""
+    
     var body: some View {
         NavigationView{
         Form{
@@ -61,16 +63,35 @@ struct SellerAdvertisementView: View {
             
             Section(header:Text("Mandatory Infomation"))
             {
-                TextField("Geo Location",text: $cageolocation)
+                TextField(" Location",text: $cageolocation)
                 TextField("Property Image",text: $propertyimage)
                 TextField("Deed Image",text: $deedimage)
             }
             
             
             Button(action:{
+                if title.isEmpty {
+                    showAlert = true
+                    error = "Title Feild Should Not Be Empty"
+                }
+                
+                if price.isEmpty {
+                    showAlert = true
+                    error = "Price Feild Should Not Be Empty"
+                }
+                if size.isEmpty {
+                    showAlert = true
+                    error = "Land Size Feild Should Not Be Empty"
+                }
+                if district.isEmpty {
+                    showAlert = true
+                    error = "District Feild Should Not Be Empty"
+                }
+                
+                
                 sellerViewModule.Seller(title:title,price: price,landhouse:landhouse,size:size,district:district,townvillage:townvillage)
                
-                showAlert = true
+            
             },label:{
                
                
@@ -100,9 +121,8 @@ struct SellerAdvertisementView: View {
         
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text("Ad Created Sucess"),
-                message: Text("Sucessfull " +
-                                "determined at this time.")
+                title: Text("Create AD Error"),
+                message: Text(error)
             )
         }
            

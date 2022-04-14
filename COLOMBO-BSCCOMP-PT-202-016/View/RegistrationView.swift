@@ -25,6 +25,8 @@ struct RegistrationView: View {
     @StateObject var rgViewModule = RegisterViewModel()
     
     @State private var showAlert = false
+    @State private var error = ""
+   
     
     @StateObject var  locationViewModule = LocationViewModule()
   
@@ -90,12 +92,63 @@ struct RegistrationView: View {
             
             Button(action:{
                 if password != retype_password {
+                    showAlert = true
+                    error = "Password & Retype Should Be Equal"
+                }
+                if nic_number.isEmpty {
+                    showAlert = true
+                    error = "Nic Number Empty"
+                }
+                
+                if self.nic_number.count < 12 {
+                    showAlert = true
+                    error = "NIC Number Should Have 12 Digits"
+                }
+                if name.isEmpty {
+                    showAlert = true
+                    error = "Name Feild Required"
+                }
+                
+                if mobile.isEmpty {
+                    showAlert = true
+                    error = "Mobile Number  Required"
+                }
+                if self.mobile.count < 10 {
+                    showAlert = true
+                    error = "Mobile Number Should Consists With 10 Numbers"
+                }
+                if email.isEmpty {
+                    showAlert = true
+                    error = "Email Feild Required"
+                }
+                
+                if !self.isValidEmail(email) {
+                    showAlert = true
+                    error = "Email is invalid"
                     
-                } else {
+                     }
+                
+                if password.isEmpty {
+                    showAlert = true
+                    error = "pasword empty"
+                }
+                
+                if self.password.count < 8 {
+                    showAlert = true
+                    error = "Password should be 8 character long"
+                }
+                
+                if retype_password.isEmpty {
+                    showAlert = true
+                    error = "pasword empty"
+                }
+                
+                
+                else {
                     
                 }
                 rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender )
-                showAlert = true
+                
                 
             },label:{
                
@@ -134,9 +187,8 @@ struct RegistrationView: View {
             
             .alert(isPresented: $showAlert) {
                 Alert(
-                    title: Text("Restration Sucess"),
-                    message: Text("Sucessfull " +
-                                    "determined at this time.")
+                    title: Text("Registration Error"),
+                    message: Text(error)
                 )
             }
             
@@ -152,7 +204,11 @@ struct RegistrationView: View {
     func re_home(){
         print("home")
     }
-    
+    private func isValidEmail(_ email: String) -> Bool {
+          let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+          let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+          return emailPred.evaluate(with: email)
+      }
     
     
         

@@ -80,8 +80,29 @@ struct LoginView: View {
             Button(action:{
                 if username.isEmpty {
                     showAlert = true
+                    error = "username empty"
+                }
+                
+                if !self.isValidEmail(username) {
+                    showAlert = true
+                    error = "Email is invalid"
+                    
+                     }
+                
+                if password.isEmpty {
+                    showAlert = true
                     error = "pasword empty"
-                } else  {
+                }
+                
+                
+                if self.password.count < 8 {
+                    showAlert = true
+                    error = "Password should be 8 character long"
+                }
+                
+                
+                
+                else  {
                     loginViewModel.login(email: username, password: password)
                     
                 }
@@ -141,7 +162,7 @@ struct LoginView: View {
             }
             .alert(isPresented: $showAlert) {
                 Alert(
-                    title: Text("Restration Sucess"),
+                    title: Text("Login Error"),
                     message: Text(error)
                 )
             }
@@ -158,6 +179,12 @@ struct LoginView: View {
     func re_home(){
         print("home")
     }
+    
+    private func isValidEmail(_ username: String) -> Bool {
+          let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+          let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+          return emailPred.evaluate(with: username)
+      }
 }
 
 struct LoginView_Previews: PreviewProvider {
