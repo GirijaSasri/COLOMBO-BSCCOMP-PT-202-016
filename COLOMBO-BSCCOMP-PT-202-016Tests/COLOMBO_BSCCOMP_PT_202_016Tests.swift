@@ -10,22 +10,35 @@ import XCTest
 
 class COLOMBO_BSCCOMP_PT_202_016Tests: XCTestCase {
 
+    
+    var loginViewModel: LoginViewModel!
+    var mockLoginService: MockLoginService!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        mockLoginService = MockLoginService()
+        loginViewModel = .init(loginService: mockLoginService)
+        
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        loginViewModel = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    func testLoginSucessTrue() throws {
+        mockLoginService.loginResult = .success(())
 
+        loginViewModel.login(email: "classwork@gmail.com", password: "pass@123")
+        XCTAssertTrue(loginViewModel.isActiveLoginHome)
+    }
+    func testLoginFailureTrue() throws {
+        
+        mockLoginService.loginResult = .failure(NSError(domain: "", code: -1, userInfo: nil))
+        
+        loginViewModel.login(email: "classwork@gmail.com", password: "pass@123")
+
+        
+    }
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {

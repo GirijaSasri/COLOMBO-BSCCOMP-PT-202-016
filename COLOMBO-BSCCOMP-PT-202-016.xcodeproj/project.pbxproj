@@ -40,6 +40,7 @@
 		52D6D6672800AE4B001808DA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D6662800AE4B001808DA /* LoginService.swift */; };
 		52D6D6692800B59A001808DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52D6D6682800B59A001808DA /* GoogleService-Info.plist */; };
 		52D6D66B2800B6C0001808DA /* AppTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */; };
+		52D8D342280891DA0035531E /* MockLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8D341280891DA0035531E /* MockLoginService.swift */; };
 		52DFD20A28018DA0000505B0 /* SellerAdvertisementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFD20928018DA0000505B0 /* SellerAdvertisementView.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		52D6D6662800AE4B001808DA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		52D6D6682800B59A001808DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextFieldView.swift; sourceTree = "<group>"; };
+		52D8D341280891DA0035531E /* MockLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginService.swift; sourceTree = "<group>"; };
 		52DFD20928018DA0000505B0 /* SellerAdvertisementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerAdvertisementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				52744BFE27F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016Tests.swift */,
+				52D8D341280891DA0035531E /* MockLoginService.swift */,
 			);
 			path = "COLOMBO-BSCCOMP-PT-202-016Tests";
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52744BFF27F9F0C500289F6F /* COLOMBO_BSCCOMP_PT_202_016Tests.swift in Sources */,
+				52D8D342280891DA0035531E /* MockLoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

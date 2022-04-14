@@ -25,6 +25,7 @@ struct SellerAdvertisementView: View {
     @State private var showAlert = false
     @State private var error = ""
     
+    @State var hasName: Bool = false
     var body: some View {
         NavigationView{
         Form{
@@ -68,29 +69,28 @@ struct SellerAdvertisementView: View {
                 TextField("Deed Image",text: $deedimage)
             }
             
-            
+            NavigationLink(destination:HomePageView(), isActive: $hasName){
             Button(action:{
+                hasName = true
                 if title.isEmpty {
-                    showAlert = true
+                  
                     error = "Title Feild Should Not Be Empty"
-                }
-                
-                if price.isEmpty {
+                }else if price.isEmpty {
                     showAlert = true
                     error = "Price Feild Should Not Be Empty"
                 }
-                if size.isEmpty {
+               else if size.isEmpty {
                     showAlert = true
                     error = "Land Size Feild Should Not Be Empty"
                 }
-                if district.isEmpty {
+                else if district.isEmpty {
                     showAlert = true
                     error = "District Feild Should Not Be Empty"
                 }
-                
-                
+                else{
+                    showAlert = true
                 sellerViewModule.Seller(title:title,price: price,landhouse:landhouse,size:size,district:district,townvillage:townvillage)
-               
+                }
             
             },label:{
                
@@ -108,6 +108,7 @@ struct SellerAdvertisementView: View {
                 
                 
             })
+            }
             
             
        }

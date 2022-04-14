@@ -95,59 +95,59 @@ struct RegistrationView: View {
                     showAlert = true
                     error = "Password & Retype Should Be Equal"
                 }
-                if nic_number.isEmpty {
+                else if nic_number.isEmpty {
                     showAlert = true
                     error = "Nic Number Empty"
                 }
                 
-                if self.nic_number.count < 12 {
+                else if self.nic_number.count < 12 {
                     showAlert = true
                     error = "NIC Number Should Have 12 Digits"
                 }
-                if name.isEmpty {
+                else if name.isEmpty {
                     showAlert = true
                     error = "Name Feild Required"
                 }
                 
-                if mobile.isEmpty {
+                else if mobile.isEmpty {
                     showAlert = true
                     error = "Mobile Number  Required"
                 }
-                if self.mobile.count < 10 {
+                else if self.mobile.count < 10 {
                     showAlert = true
                     error = "Mobile Number Should Consists With 10 Numbers"
                 }
-                if email.isEmpty {
+                else if email.isEmpty {
                     showAlert = true
                     error = "Email Feild Required"
                 }
                 
-                if !self.isValidEmail(email) {
+                else if !self.isValidEmail(email) {
                     showAlert = true
                     error = "Email is invalid"
                     
                      }
                 
-                if password.isEmpty {
+                else if password.isEmpty {
                     showAlert = true
                     error = "pasword empty"
                 }
                 
-                if self.password.count < 8 {
+                else if self.password.count < 8 {
                     showAlert = true
                     error = "Password should be 8 character long"
                 }
                 
-                if retype_password.isEmpty {
+                else if retype_password.isEmpty {
                     showAlert = true
                     error = "pasword empty"
                 }
                 
                 
                 else {
-                    
+                    rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender )
                 }
-                rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender )
+                
                 
                 
             },label:{

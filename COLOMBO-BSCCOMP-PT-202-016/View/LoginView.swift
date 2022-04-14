@@ -14,6 +14,7 @@ struct LoginView: View {
     
     @State private var showAlert = false
     @State private var error = ""
+    @State var hasName: Bool = false
    
     @StateObject var loginViewModel = LoginViewModel()
     var body: some View {
@@ -76,26 +77,28 @@ struct LoginView: View {
          
            
             
-            
+        NavigationLink(destination:HomePageView(), isActive: $hasName){
             Button(action:{
+                hasName = true
+                
                 if username.isEmpty {
                     showAlert = true
                     error = "username empty"
                 }
                 
-                if !self.isValidEmail(username) {
+                else if !self.isValidEmail(username) {
                     showAlert = true
                     error = "Email is invalid"
                     
                      }
                 
-                if password.isEmpty {
+                else if password.isEmpty {
                     showAlert = true
                     error = "pasword empty"
                 }
                 
                 
-                if self.password.count < 8 {
+                else if self.password.count < 8 {
                     showAlert = true
                     error = "Password should be 8 character long"
                 }
@@ -108,11 +111,13 @@ struct LoginView: View {
                 }
             
             }
+            
                    
                    
                    
             
             )
+            
                {Text("Login")
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
@@ -122,7 +127,7 @@ struct LoginView: View {
                     .clipShape(Capsule())
                }
                
-        
+        }
 //            .padding()
 //            .background(Color(red: 0, green: 0, blue: 0.5))
 //            .clipShape(Capsule())
@@ -144,17 +149,18 @@ struct LoginView: View {
                     Text("Don't have a account")
                         .foregroundColor(Color.white.opacity(0.6))
                  
-                   
-                    Button(action:{},label:{
-                        NavigationLink(destination: RegistrationView()) {
+                NavigationLink(destination:RegistrationView(), isActive: $hasName){
+                    Button(action:{
+                        hasName = true
+                    },label:{
                         Text("Signup")
                             .fontWeight(.heavy)
                             .foregroundColor(Color("button"))
-                        }
+                        
                         
                     })
                     
-                    
+                    }
                     
                 }
               

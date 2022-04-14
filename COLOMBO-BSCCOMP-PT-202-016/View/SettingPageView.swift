@@ -25,6 +25,7 @@ struct SettingPageView: View {
     @State private var showAlert = false
     @State private var error = ""
     
+    @State var hasName: Bool = false
     var body: some View {
    NavigationView{
        
@@ -71,7 +72,9 @@ struct SettingPageView: View {
                
                
            }
+           NavigationLink(destination:HomePageView(), isActive: $hasName){
            Button(action:{
+               hasName = true
                if mobile.isEmpty {
                    showAlert = true
                    error = "Mobile Number  Required"
@@ -81,7 +84,7 @@ struct SettingPageView: View {
                    error = "Mobile Number Should Consists With 10 Numbers"
                }
                
-               if changepassword.isEmpty {
+               else if changepassword.isEmpty {
                    showAlert = true
                    error = "Password Number  Required"
                }
@@ -107,7 +110,7 @@ struct SettingPageView: View {
                
                
            })
-         
+           }
            
            
            }

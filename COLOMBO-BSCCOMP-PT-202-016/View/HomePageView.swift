@@ -143,6 +143,7 @@ struct ItemCardView: View {
 
 struct HomelayoutView: View {
     var body: some View {
+      
         ZStack {
             ScrollView {
                 ZStack{
@@ -199,6 +200,7 @@ struct HomelayoutView: View {
                 }
             }
         }
+        
     }
 }
 
@@ -216,25 +218,31 @@ struct navigationbar: View {
 struct navbarsection: View {
 
     var body: some View {
-        VStack {
-            HomelayoutView()
-            
+      
         
+        VStack {
+          
+            
+            HomelayoutView()
+           
             
                 HStack{
-                    
+              
+                       
                             navigationbar(barimage:Image("HomeIcon")){}
                             navigationbar(barimage:Image("adsIcon")){}
                             navigationbar(barimage:Image("settingIcon")){}
                             navigationbar(barimage:Image("LogoutIcon")){}
                             
                         }
+        
                         .padding()
                         .background(Color.white)
                     .frame(alignment: .bottom)
             
+        
             
-            
-        }
+        
+    }
     }
 }
