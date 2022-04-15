@@ -77,7 +77,7 @@ struct LoginView: View {
          
            
             
-        NavigationLink(destination:HomePageView(), isActive: $hasName){
+        NavigationLink(destination:HomeDeatilView(), isActive: $hasName){
             Button(action:{
                 hasName = true
                 

@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class LoginViewModel: ObservableObject
 {
-     
+    @Published var isActiveLoginHome = false
     let auth = Auth.auth()
     private var loginService:LoginServiceProtocol
     
@@ -30,6 +30,7 @@ class LoginViewModel: ObservableObject
                     switch result {
                     case .success:
                         print(result)
+                        self.isActiveLoginHome = true
                         print("success")
                     case let .failure(error) :
                         print(error.localizedDescription)
