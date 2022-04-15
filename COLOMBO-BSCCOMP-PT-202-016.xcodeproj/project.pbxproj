@@ -26,6 +26,8 @@
 		52744C3427FA25B100289F6F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52744C3327FA25B100289F6F /* HomeViewModel.swift */; };
 		52747AC72800060C00B34ABF /* HomeDeatilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52747AC62800060C00B34ABF /* HomeDeatilView.swift */; };
 		5277189C27FEC49A0071B8D4 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277189B27FEC49A0071B8D4 /* HomePageView.swift */; };
+		527A65B02809D27900050F75 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A65AF2809D27900050F75 /* Advertisement.swift */; };
+		527A65B32809D32800050F75 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 527A65B22809D32800050F75 /* FirebaseFirestoreSwift-Beta */; };
 		5283246F2802194E0099358E /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283246E2802194E0099358E /* LocationViewModel.swift */; };
 		52832471280220330099358E /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52832470280220330099358E /* RegistrationService.swift */; };
 		528FA4192801C38500106C81 /* SettingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528FA4182801C38500106C81 /* SettingPageView.swift */; };
@@ -63,7 +65,7 @@
 
 /* Begin PBXFileReference section */
 		525B2EF62801343700D7361A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
-		52744BEA27F9F0C200289F6F /* COLOMBO-BSCCOMP-PT-202-016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COLOMBO-BSCCOMP-PT-202-016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52744BEA27F9F0C200289F6F /* NIBM Broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Broker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52744BED27F9F0C200289F6F /* COLOMBO_BSCCOMP_PT_202_016App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COLOMBO_BSCCOMP_PT_202_016App.swift; sourceTree = "<group>"; };
 		52744BEF27F9F0C200289F6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52744BF127F9F0C500289F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		52744C3327FA25B100289F6F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		52747AC62800060C00B34ABF /* HomeDeatilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDeatilView.swift; sourceTree = "<group>"; };
 		5277189B27FEC49A0071B8D4 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		527A65AF2809D27900050F75 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
 		5283246E2802194E0099358E /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		52832470280220330099358E /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		528FA4182801C38500106C81 /* SettingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageView.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 			files = (
 				52744C1D27F9FD2600289F6F /* FirebaseDatabase in Frameworks */,
 				52744C2127F9FD2600289F6F /* FirebaseStorage in Frameworks */,
+				527A65B32809D32800050F75 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				52744C1B27F9FD2600289F6F /* FirebaseAuth in Frameworks */,
 				52744C1F27F9FD2600289F6F /* FirebaseFirestore in Frameworks */,
 			);
@@ -134,13 +138,14 @@
 				52744BFD27F9F0C500289F6F /* COLOMBO-BSCCOMP-PT-202-016Tests */,
 				52744C0727F9F0C500289F6F /* COLOMBO-BSCCOMP-PT-202-016UITests */,
 				52744BEB27F9F0C200289F6F /* Products */,
+				527A65B12809D32800050F75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		52744BEB27F9F0C200289F6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52744BEA27F9F0C200289F6F /* COLOMBO-BSCCOMP-PT-202-016.app */,
+				52744BEA27F9F0C200289F6F /* NIBM Broker.app */,
 				52744BFA27F9F0C500289F6F /* COLOMBO-BSCCOMP-PT-202-016Tests.xctest */,
 				52744C0427F9F0C500289F6F /* COLOMBO-BSCCOMP-PT-202-016UITests.xctest */,
 			);
@@ -223,6 +228,7 @@
 		52744C2427FA1B6700289F6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				527A65AF2809D27900050F75 /* Advertisement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +239,13 @@
 				52D6D66A2800B6C0001808DA /* AppTextFieldView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		527A65B12809D32800050F75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		52D6D6642800ADE9001808DA /* Service */ = {
@@ -268,9 +281,10 @@
 				52744C1C27F9FD2600289F6F /* FirebaseDatabase */,
 				52744C1E27F9FD2600289F6F /* FirebaseFirestore */,
 				52744C2027F9FD2600289F6F /* FirebaseStorage */,
+				527A65B22809D32800050F75 /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = "COLOMBO-BSCCOMP-PT-202-016";
-			productReference = 52744BEA27F9F0C200289F6F /* COLOMBO-BSCCOMP-PT-202-016.app */;
+			productReference = 52744BEA27F9F0C200289F6F /* NIBM Broker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		52744BF927F9F0C500289F6F /* COLOMBO-BSCCOMP-PT-202-016Tests */ = {
@@ -405,6 +419,7 @@
 				52981BB3280410B8004B901A /* SettingService.swift in Sources */,
 				52744BF027F9F0C200289F6F /* ContentView.swift in Sources */,
 				52981BB5280410E2004B901A /* SettingsViewModule.swift in Sources */,
+				527A65B02809D27900050F75 /* Advertisement.swift in Sources */,
 				52D6D6672800AE4B001808DA /* LoginService.swift in Sources */,
 				52AF07242803136900CDE634 /* MenuView.swift in Sources */,
 				529463622806C2DF009391FA /* ForgotPasswordViewModel.swift in Sources */,
@@ -587,7 +602,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Nibm-Broker.COLOMBO-BSCCOMP-PT-202-016";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NIBM Broker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,7 +632,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Nibm-Broker.COLOMBO-BSCCOMP-PT-202-016";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NIBM Broker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -768,6 +783,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 52744C1927F9FD2600289F6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		527A65B22809D32800050F75 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52744C1927F9FD2600289F6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

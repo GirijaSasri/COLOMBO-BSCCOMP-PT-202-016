@@ -142,6 +142,8 @@ struct ItemCardView: View {
 }
 
 struct HomelayoutView: View {
+    @StateObject var homeViewModel = HomeViewModel()
+    
     var body: some View {
       
         ZStack {
@@ -168,10 +170,14 @@ struct HomelayoutView: View {
                             
                             ScrollView (.horizontal,showsIndicators: false){
                                 HStack {
-                                    ForEach(0 ..< 4) { index in
-                                        ItemCardView(image:Image("DemoHouseImage_\(index + 1)"), size: 210)
+                                    if homeViewModel.isLoading {
+                                        ProgressView()
+                                    } else {
+                                        ForEach(0 ..< homeViewModel.ads.count) { index in
+                                            ItemCardView(image:Image("DemoHouseImage_\(index + 1)"), size: 210)
+                                        }
+                                        .padding(.trailing)
                                     }
-                                    .padding(.trailing)
                                 }
                                 .padding(.leading)
                             }
