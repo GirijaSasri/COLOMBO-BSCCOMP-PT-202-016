@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>COLOMBO-BSCCOMP-PT-202-016Tests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Promises (Playground) 1.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,6 +34,24 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>52744BE927F9F0C200289F6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>52744BF927F9F0C500289F6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>52744C0327F9F0C500289F6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
