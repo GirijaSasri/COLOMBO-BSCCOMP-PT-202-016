@@ -14,14 +14,14 @@ import Firebase
 protocol RegisterServiceProtocol {
     
     func userRegistration(
-        email: String, password: String,name:String,nic_number:String,mobile:String,dob:Date,selectedGender:Int,CLLocation:GeoPoint,completion: @escaping (Result<Void, Error>) -> Void)
+        email: String, password: String,name:String,nic_number:String,mobile:String,dob:Date,selectedGender:Int,completion: @escaping (Result<Void, Error>) -> Void)
     
 }
 
 class RegisterService: RegisterServiceProtocol {
     let auth = Auth.auth()
     
-    func userRegistration( email: String, password: String,name: String,nic_number: String,mobile: String ,dob: Date,selectedGender:Int,CLLocation:GeoPoint,completion: @escaping (Result<Void, Error>) -> Void) {
+    func userRegistration( email: String, password: String,name: String,nic_number: String,mobile: String ,dob: Date,selectedGender:Int,completion: @escaping (Result<Void, Error>) -> Void) {
         auth.createUser(withEmail: email, password: password) { (result, error) in
             if error != nil {
                 completion(.failure(error!))
@@ -35,7 +35,7 @@ class RegisterService: RegisterServiceProtocol {
                     "mobile": mobile,
                     "dob":dob,
                     "selectedGender":selectedGender,
-                    "CLLocation": CLLocation
+//                    "CLLocation": CLLocation
 //                    "statusTime": Timestamp(date: Date())
                 ]) { err in
                     if let err = err {
