@@ -4,9 +4,9 @@
 //
 //  Created by Sasri on 2022-04-03.
 //
-//
+
 //import XCTest
-//@testable import COLOMBO_BSCCOMP_PT_202_016
+//@testable import COLOMBO-BSCCOMP-PT-202-016
 //
 //class COLOMBO_BSCCOMP_PT_202_016Tests: XCTestCase {
 //
@@ -28,7 +28,7 @@
 //    func testLoginSucessTrue() throws {
 //        mockLoginService.loginResult = .success(())
 //
-//        loginViewModel.login(email: "classwork@gmail.com", password: "pass@123")
+//        loginViewModel.login(email: "asanka@gmail.com", password: "asanka@123")
 //        XCTAssertTrue(loginViewModel.isActiveLoginHome)
 //    }
 //    func testLoginFailureTrue() throws {
