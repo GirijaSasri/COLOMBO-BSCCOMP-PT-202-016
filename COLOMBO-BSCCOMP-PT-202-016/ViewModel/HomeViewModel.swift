@@ -34,6 +34,8 @@ class HomeViewModel: ObservableObject
                 (doc) -> Advertisement? in
                 return try? doc.data(as: Advertisement.self)
             }
+            
+            print(self.ads.count)
         }
     }
     

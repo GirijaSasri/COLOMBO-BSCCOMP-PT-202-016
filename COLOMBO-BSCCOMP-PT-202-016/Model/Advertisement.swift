@@ -9,10 +9,11 @@ import Foundation
 import FirebaseFirestoreSwift
 
 class Advertisement: Codable, Identifiable {
-    @DocumentID var id:   String? = UUID().uuidString
+    @DocumentID var userID:   String? = UUID().uuidString
     let price: Double
     let landhouse: Int
     let district: String
+    let townvillage: Int
     let size: String
     let title: String
 }
