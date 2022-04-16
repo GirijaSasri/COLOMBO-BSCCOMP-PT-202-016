@@ -20,8 +20,10 @@ class LoginService: LoginServiceProtocol {
     func userLogin(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
         auth.signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
+                print("error")
                 completion(.failure(error!))
             } else {
+                print("success")
                 completion(.success(()))
             }
         }

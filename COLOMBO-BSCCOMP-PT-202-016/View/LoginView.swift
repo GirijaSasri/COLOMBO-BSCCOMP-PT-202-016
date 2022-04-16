@@ -77,7 +77,7 @@ struct LoginView: View {
          
            
             
-        NavigationLink(destination:HomeDeatilView(), isActive: $hasName){
+        NavigationLink(destination:SellerAdvertisementView(), isActive: $hasName){
             Button(action:{
                 hasName = true
                 
@@ -149,9 +149,9 @@ struct LoginView: View {
                     Text("Don't have a account")
                         .foregroundColor(Color.white.opacity(0.6))
                  
-                NavigationLink(destination:RegistrationView(), isActive: $hasName){
+               
                     Button(action:{
-                        hasName = true
+                       
                     },label:{
                         Text("Signup")
                             .fontWeight(.heavy)
@@ -160,7 +160,7 @@ struct LoginView: View {
                         
                     })
                     
-                    }
+                    
                     
                 }
               

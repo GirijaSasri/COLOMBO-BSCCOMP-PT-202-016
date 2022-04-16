@@ -43,6 +43,7 @@ struct SellerAdvertisementView: View {
                     Picker(selection: $landhouse, label: Text("Land / House")) {
                                     ForEach(0 ..< types.count) {
                                         Text(self.types[$0])
+                                        
                                     }
                                 }
                 }
@@ -58,6 +59,7 @@ struct SellerAdvertisementView: View {
                                         Text(self.parts[$0])
                                     }
                                 }
+                    
                 }
                 
             }
@@ -69,9 +71,9 @@ struct SellerAdvertisementView: View {
                 TextField("Deed Image",text: $deedimage)
             }
             
-            NavigationLink(destination:HomePageView(), isActive: $hasName){
+           
             Button(action:{
-                hasName = true
+                
                 if title.isEmpty {
                   
                     error = "Title Feild Should Not Be Empty"
@@ -88,14 +90,15 @@ struct SellerAdvertisementView: View {
                     error = "District Feild Should Not Be Empty"
                 }
                 else{
-                    showAlert = true
-                sellerViewModule.Seller(title:title,price: price,landhouse:landhouse,size:size,district:district,townvillage:townvillage)
+                    showAlert = false
+                    print("inside passing")
+                    sellerViewModule.Seller(title:title,price: price,landhouse:landhouse,size:size,district:district,townvillage:townvillage)
                 }
             
             },label:{
+                
                
                
-         
                     Text("Create")
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
@@ -108,13 +111,14 @@ struct SellerAdvertisementView: View {
                 
                 
             })
-            }
+            
             
             
        }
         .accentColor(.blue)
         .navigationTitle("Create AD")
         .toolbar{
+            
             Button("Home",action: home)
             .foregroundColor(Color.red)
            
@@ -122,6 +126,7 @@ struct SellerAdvertisementView: View {
         
         .alert(isPresented: $showAlert) {
             Alert(
+                
                 title: Text("Create AD Error"),
                 message: Text(error)
             )
@@ -129,7 +134,7 @@ struct SellerAdvertisementView: View {
            
         
             
-            
+           
           
     }
         

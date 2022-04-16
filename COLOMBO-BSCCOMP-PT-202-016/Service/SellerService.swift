@@ -20,9 +20,10 @@ protocol SellerServiceProtocol {
 class SellerService: SellerServiceProtocol {
     let auth = Auth.auth()
     
-    func userSeller( title: String,price: String,landhouse: Int,size:String,district:String,townvillage:Int,completion: @escaping (Result<Void, Error>) -> Void) {
-      
+    func userSeller(title: String,price: String,landhouse: Int,size:String,district:String,townvillage:Int,completion: @escaping (Result<Void, Error>) -> Void) {
+      print("per auth")
         guard let userID = Auth.auth().currentUser?.uid else { return }
+        print("post auth")
         Firestore.firestore().collection("advertisement").document().setData([
             "userID": userID,
             "title": title,
@@ -30,9 +31,7 @@ class SellerService: SellerServiceProtocol {
             "landhouse": landhouse,
             "size": size,
             "district":district,
-            "townvillage":townvillage,
-//                    "status": "active",
-//                    "statusTime": Timestamp(date: Date())
+            "townvillage":townvillage
         ]) { err in
             if let err = err {
                 print("Error \(err)")

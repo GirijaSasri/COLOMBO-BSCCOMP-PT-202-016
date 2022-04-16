@@ -19,7 +19,7 @@ class SellerViewModel: ObservableObject
     }
    
     
-    func Seller(title:String,price:String,landhouse:Int,size:String,district:String,townvillage:Int)
+    func Seller(title:String,price:String,landhouse:Int,size:String,district:String,townvillage:Int,CLLocation:GeoPoint)
     {
         sellerService.userSeller(title: title, price: price, landhouse: landhouse,size: size,district: district,townvillage:townvillage) { result in
                     switch result {

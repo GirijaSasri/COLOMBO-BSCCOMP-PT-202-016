@@ -109,6 +109,7 @@ struct LandSeacrhView: View {
 
 struct ItemCardView: View {
     let image: Image
+    let ad:Advertisement
     let size:CGFloat
     var body: some View {
         VStack{
@@ -117,7 +118,7 @@ struct ItemCardView: View {
                 .frame(width: size, height: 200 * (size/210))
                 .cornerRadius(20.0)
             
-            Text("Marada House")
+            Text(ad.title)
                 .font(.title3)
                 .fontWeight(.bold)
             
@@ -161,42 +162,20 @@ struct HomelayoutView: View {
                         LandSeacrhView()
                             .padding()
                         
-                        VStack{
-                            Text("Top Ads")
-                                .fontWeight(.bold)
-                                .font(.title2)
-                                .foregroundColor(Color("BlackColor"))
-                                .padding(.horizontal)
-                            
-                            ScrollView (.horizontal,showsIndicators: false){
-                                HStack {
-                                    if homeViewModel.isLoading {
-                                        ProgressView()
-                                    } else {
-                                        ForEach(0 ..< homeViewModel.ads.count) { index in
-                                            ItemCardView(image:Image("DemoHouseImage_\(index + 1)"), size: 210)
-                                        }
-                                        .padding(.trailing)
-                                    }
+                        Text("Top Ads")
+                            .fontWeight(.bold)
+                            .font(.title2)
+                            .foregroundColor(Color("BlackColor"))
+                            .padding(.horizontal)
+                        
+                        if homeViewModel.isLoading {
+                            ProgressView()
+                        } else {
+                            ScrollView (.vertical,showsIndicators: false){
+                                ForEach(self.homeViewModel.ads, id: \.id){ ad in
+                                    ItemCardView(image:Image("DemoHouseImage_\(1)"),ad: ad, size: 210)
+                                    
                                 }
-                                .padding(.leading)
-                            }
-                            
-                            Text("Trending Ads")
-                                .fontWeight(.bold)
-                                .font(.title2)
-                                .foregroundColor(Color("BlackColor"))
-                                .padding(.horizontal)
-                                .padding(.leading)
-                            
-                            ScrollView (.horizontal,showsIndicators: false){
-                                HStack {
-                                    ForEach(0 ..< 4) { index in
-                                        ItemCardView(image:Image("DemoHouseImage_\(index + 1)"), size: 180)
-                                    }
-                                    .padding(.trailing)
-                                }
-                                .padding(.leading)
                             }
                         }
                         

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct RegistrationView: View {
     @State private var nic_number = ""
@@ -145,6 +146,7 @@ struct RegistrationView: View {
                 
                 
                 else {
+                    let cLocation: GeoPoint = GeoPoint(latitude: locationViewModule.location?.coordinate.latitude, longitude: locationViewModule.location?.coordinate.longitude)
                     rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender )
                 }
                 

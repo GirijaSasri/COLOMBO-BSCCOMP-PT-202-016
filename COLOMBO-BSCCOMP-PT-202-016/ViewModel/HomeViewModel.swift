@@ -10,14 +10,15 @@ import Firebase
 
 class HomeViewModel: ObservableObject
 {
-    var ads:[Advertisement] = []
-    var isLoading = false
+    @Published var ads:[Advertisement] = []
+    @Published var isLoading = false
     
     init(){
         fetchAds()
     }
     
     func fetchAds(){
+        isLoading = true
         Firestore.firestore().collection("advertisement").getDocuments() {
             (querySnapshot, error) in
             if let error = error {
@@ -36,6 +37,7 @@ class HomeViewModel: ObservableObject
             }
             
             print(self.ads.count)
+            self.isLoading = false
         }
     }
     
