@@ -6,55 +6,47 @@
 //
 
 import SwiftUI
+import Firebase
 
 
 struct HomePageView: View {
-    
-  
-    
     var body: some View {
-        
-      
         VStack {
             navbarsection()
         }
-    //navigation bar
-     
-        
-       
-
     }
-    
 }
 
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView()
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
     }
 }
 
-struct AppBarView: View {
-    var body: some View {
-        HStack{
-            Button(action:{}) {
-                Image("menuicon")
-                    .padding()
-                    .background(Color(.white))
-                    .cornerRadius(10.0)
-            }
-            
-            Spacer()
-            Button(action:{}) {
-                Image("kusalIcon")
-                    .resizable()
-                    .frame(width: 42, height:42)
-                    .cornerRadius(10.0)
-            }
-            
-        }
-        .padding(.horizontal)
-    }
-}
+//struct AppBarView: View {
+//    var body: some View {
+//        HStack{
+//            Button(action:{}) {
+//                Image("menuicon")
+//                    .padding()
+//                    .background(Color(.white))
+//                    .cornerRadius(10.0)
+//            }
+//
+//            Spacer()
+//            Button(action:{}) {
+//                Image("kusalIcon")
+//                    .resizable()
+//                    .frame(width: 42, height:42)
+//                    .cornerRadius(10.0)
+//            }
+//
+//        }
+//        .padding(.horizontal)
+//    }
+//}
 
 struct TagLingView: View {
     var body: some View {
@@ -122,6 +114,10 @@ struct ItemCardView: View {
                 .font(.title3)
                 .fontWeight(.bold)
             
+            Text(ad.price)
+                .font(.title3)
+                .fontWeight(.bold)
+            
             HStack(spacing: 2){
 //                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
 //                    Image("StarIcon")
@@ -144,9 +140,12 @@ struct ItemCardView: View {
 
 struct HomelayoutView: View {
     @StateObject var homeViewModel = HomeViewModel()
+    @StateObject var loginViewModdel = LoginViewModel()
+    
+    @State var isSignInActive = false
+    @State var isHomeDetailsActive = false
     
     var body: some View {
-      
         ZStack {
             ScrollView {
                 ZStack{
@@ -154,8 +153,6 @@ struct HomelayoutView: View {
                         .edgesIgnoringSafeArea(.all)
                     
                     VStack (alignment:.leading){
-                        AppBarView()
-                        
                         TagLingView()
                             .padding()
                         
@@ -169,17 +166,44 @@ struct HomelayoutView: View {
                             .padding(.horizontal)
                         
                         if homeViewModel.isLoading {
-                            ProgressView()
+                            VStack{
+                                Spacer()
+                                ProgressView()
+                                
+                                Spacer()
+                            }
                         } else {
-                            ScrollView (.vertical,showsIndicators: false){
-                                ForEach(self.homeViewModel.ads, id: \.id){ ad in
-                                    ItemCardView(image:Image("DemoHouseImage_\(1)"),ad: ad, size: 210)
+                            if loginViewModdel.isuserlogin {
+                                ScrollView (.vertical,showsIndicators: false){
+                                    ForEach(self.homeViewModel.ads, id: \.id){ ad in
+                                        NavigationLink(destination: HomeDeatilView(ad:ad), isActive: $isHomeDetailsActive){
+                                            Button(action:{isHomeDetailsActive = true}){
+                                                ItemCardView(image:Image("DemoHouseImage_\(1)"),ad: ad, size: 210)
+                                            }
+                                            
+                                        }
+                                 
+                                        
+                                    }
+                                }
+                            } else {
+                                NavigationLink(destination: LoginView(), isActive: $isSignInActive){
+                                    Button(action:{
+                                        isSignInActive = true
+                                    }){
+                                        ScrollView (.vertical,showsIndicators: false){
+                                            ForEach(self.homeViewModel.ads, id: \.id){ ad in
+                                                ItemCardView(image:Image("DemoHouseImage_\(1)"),ad: ad, size: 210)
+                                                
+                                            }
+                                        }
+                                        
+                                    }
                                     
                                 }
+                              
                             }
                         }
-                        
-                        
                     }
                     
                 }
@@ -206,28 +230,17 @@ struct navbarsection: View {
       
         
         VStack {
-          
-            
             HomelayoutView()
-           
-            
-                HStack{
-              
-                       
-                            navigationbar(barimage:Image("HomeIcon")){}
-                            navigationbar(barimage:Image("adsIcon")){}
-                            navigationbar(barimage:Image("settingIcon")){}
-                            navigationbar(barimage:Image("LogoutIcon")){}
-                            
-                        }
-        
-                        .padding()
-                        .background(Color.white)
-                    .frame(alignment: .bottom)
-            
-        
-            
-        
+//                HStack{
+//                        navigationbar(barimage:Image("HomeIcon")){}
+//                        navigationbar(barimage:Image("adsIcon")){}
+//                        navigationbar(barimage:Image("settingIcon")){}
+//                        navigationbar(barimage:Image("LogoutIcon")){}
+//
+//                    }
+//                    .padding()
+//                    .background(Color.white)
+//                    .frame(alignment: .bottom)
     }
     }
 }

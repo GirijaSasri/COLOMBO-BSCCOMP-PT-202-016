@@ -38,6 +38,7 @@
 		52981BB5280410E2004B901A /* SettingsViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52981BB4280410E2004B901A /* SettingsViewModule.swift */; };
 		52981BB7280414CA004B901A /* SellerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52981BB6280414CA004B901A /* SellerService.swift */; };
 		52981BB92804160D004B901A /* SellerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52981BB82804160D004B901A /* SellerViewModel.swift */; };
+		52AD10BE280BCB5F00FFDA6A /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD10BD280BCB5F00FFDA6A /* HomeTabView.swift */; };
 		52AF07242803136900CDE634 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF07232803136900CDE634 /* MenuView.swift */; };
 		52D6D6672800AE4B001808DA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D6662800AE4B001808DA /* LoginService.swift */; };
 		52D6D6692800B59A001808DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52D6D6682800B59A001808DA /* GoogleService-Info.plist */; };
@@ -65,7 +66,7 @@
 
 /* Begin PBXFileReference section */
 		525B2EF62801343700D7361A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
-		52744BEA27F9F0C200289F6F /* NIBM Broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Broker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52744BEA27F9F0C200289F6F /* COLOMBO-BSCCOMP-PT-202-016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COLOMBO-BSCCOMP-PT-202-016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52744BED27F9F0C200289F6F /* COLOMBO_BSCCOMP_PT_202_016App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COLOMBO_BSCCOMP_PT_202_016App.swift; sourceTree = "<group>"; };
 		52744BEF27F9F0C200289F6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52744BF127F9F0C500289F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		52981BB4280410E2004B901A /* SettingsViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModule.swift; sourceTree = "<group>"; };
 		52981BB6280414CA004B901A /* SellerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerService.swift; sourceTree = "<group>"; };
 		52981BB82804160D004B901A /* SellerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerViewModel.swift; sourceTree = "<group>"; };
+		52AD10BD280BCB5F00FFDA6A /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		52AF07232803136900CDE634 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		52D6D6662800AE4B001808DA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		52D6D6682800B59A001808DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -145,7 +147,7 @@
 		52744BEB27F9F0C200289F6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52744BEA27F9F0C200289F6F /* NIBM Broker.app */,
+				52744BEA27F9F0C200289F6F /* COLOMBO-BSCCOMP-PT-202-016.app */,
 				52744BFA27F9F0C500289F6F /* COLOMBO-BSCCOMP-PT-202-016Tests.xctest */,
 				52744C0427F9F0C500289F6F /* COLOMBO-BSCCOMP-PT-202-016UITests.xctest */,
 			);
@@ -207,6 +209,7 @@
 				528FA4182801C38500106C81 /* SettingPageView.swift */,
 				52AF07232803136900CDE634 /* MenuView.swift */,
 				5294635D2806B91F009391FA /* ForgetPasswordView.swift */,
+				52AD10BD280BCB5F00FFDA6A /* HomeTabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,7 +287,7 @@
 				527A65B22809D32800050F75 /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = "COLOMBO-BSCCOMP-PT-202-016";
-			productReference = 52744BEA27F9F0C200289F6F /* NIBM Broker.app */;
+			productReference = 52744BEA27F9F0C200289F6F /* COLOMBO-BSCCOMP-PT-202-016.app */;
 			productType = "com.apple.product-type.application";
 		};
 		52744BF927F9F0C500289F6F /* COLOMBO-BSCCOMP-PT-202-016Tests */ = {
@@ -404,6 +407,7 @@
 			files = (
 				52981BB7280414CA004B901A /* SellerService.swift in Sources */,
 				525B2EF72801343700D7361A /* RegistrationView.swift in Sources */,
+				52AD10BE280BCB5F00FFDA6A /* HomeTabView.swift in Sources */,
 				52832471280220330099358E /* RegistrationService.swift in Sources */,
 				52DFD20A28018DA0000505B0 /* SellerAdvertisementView.swift in Sources */,
 				52744C2827FA1C5C00289F6F /* LoginView.swift in Sources */,
@@ -602,7 +606,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Nibm-Broker.COLOMBO-BSCCOMP-PT-202-016";
-				PRODUCT_NAME = "NIBM Broker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -632,7 +636,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Nibm-Broker.COLOMBO-BSCCOMP-PT-202-016";
-				PRODUCT_NAME = "NIBM Broker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

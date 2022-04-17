@@ -25,6 +25,8 @@ struct SettingPageView: View {
     @State private var showAlert = false
     @State private var error = ""
     
+    @StateObject var loginViewModel = LoginViewModel()
+    
     @State var hasName: Bool = false
     var body: some View {
    NavigationView{
@@ -95,9 +97,6 @@ struct SettingPageView: View {
                
                
            },label:{
-              
-               
-               
                    Text("Save")
                    .fontWeight(.heavy)
                    .foregroundColor(.black)
@@ -105,13 +104,22 @@ struct SettingPageView: View {
                    .padding(.vertical)
                    .background(Color("button"))
                    .clipShape(Capsule())
-                   
-              
-               
-               
+                  
            })
            }
-           
+           Button(action:{
+               loginViewModel.logoutUser()
+           },label:{
+                   Text("Logout")
+                   .fontWeight(.heavy)
+                   .foregroundColor(.black)
+                   .frame(width:UIScreen.main.bounds.width-70)
+                   .padding(.vertical)
+                   .background(Color("button"))
+                   .clipShape(Capsule())
+                  
+           })
+           }
            
            }
            .accentColor(.blue)
@@ -136,7 +144,7 @@ struct SettingPageView: View {
            
          }
     }
-}
+
 func home()
 {
     

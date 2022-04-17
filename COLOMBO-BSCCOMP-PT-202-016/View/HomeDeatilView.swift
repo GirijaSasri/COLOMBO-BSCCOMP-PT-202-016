@@ -8,18 +8,58 @@
 import SwiftUI
 
 struct HomeDeatilView: View {
+    let ad:Advertisement
     var body: some View {
-        VStack{
-            PricebarView()
+        ZStack{
+            Color("HomePageBackgroud")
+                .edgesIgnoringSafeArea(.all)
+            
+            
+            VStack{
+                Image("DemoHouseImage_1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .edgesIgnoringSafeArea(.top)
+                
+                DetailView()
+                    .offset(y:-40)
+                
+                
+            }
+            HStack{
+                Text("Rs.50000")
+                    .font(.title)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Button(action:{},label:{
+                    
+                    Text("Home")
+                        .padding()
+                        .padding(.horizontal)
+                        .background(Color.white)
+                        .cornerRadius(10.0)
+                    
+                    
+                })
+                
+            }
+            .padding()
+            .padding(.horizontal)
+            .background(Color("AppTextColor"))
+            .frame(maxHeight: .infinity,alignment: .bottom)
         }
+        .edgesIgnoringSafeArea(.bottom)
        }
     }
 
-struct HomeDeatilView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeDeatilView()
-    }
-}
+//struct HomeDeatilView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeDeatilView(ad:Advertisement)
+//        
+//    }
+//}
 
 struct DetailView: View {
     var body: some View {

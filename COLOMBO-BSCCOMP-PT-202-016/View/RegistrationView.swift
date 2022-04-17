@@ -146,8 +146,8 @@ struct RegistrationView: View {
                 
                 
                 else {
-//                    let CLLocation: GeoPoint = GeoPoint(latitude: locationViewModule.location?.coordinate.latitude, longitude: locationViewModule.location?.coordinate.longitude)
-                    rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender )
+                    let clLocation: GeoPoint = GeoPoint(latitude: locationViewModule.location?.coordinate.latitude ?? 0.0, longitude: locationViewModule.location?.coordinate.longitude ?? 0.0)
+                    rgViewModule.register(email: email, password: password,name: name,nic_number:nic_number,mobile:mobile,dob:dob, selectedGender: selectedGender,clLocation:clLocation)
                 }
                 
                 

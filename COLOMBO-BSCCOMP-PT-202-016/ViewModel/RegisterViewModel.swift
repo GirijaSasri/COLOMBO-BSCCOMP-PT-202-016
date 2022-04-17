@@ -25,9 +25,9 @@ class RegisterViewModel: ObservableObject
 //        return auth.currentUser != nil
 //    }
     
-    func register(email:String,password:String,name:String,nic_number:String,mobile:String,dob:Date,selectedGender:Int)
+    func register(email:String,password:String,name:String,nic_number:String,mobile:String,dob:Date,selectedGender:Int,clLocation:GeoPoint)
     {
-        registerService.userRegistration(email: email, password: password,name: name,nic_number: nic_number,mobile: mobile,dob: dob,selectedGender:selectedGender) { result in
+        registerService.userRegistration(email: email, password: password,name: name,nic_number: nic_number,mobile: mobile,dob: dob,selectedGender:selectedGender,clLocation:clLocation) { result in
                     switch result {
                     case .success:
                         print(result)

@@ -77,10 +77,9 @@ struct LoginView: View {
          
            
             
-        NavigationLink(destination:SellerAdvertisementView(), isActive: $hasName){
+    
             Button(action:{
-                hasName = true
-                
+            
                 if username.isEmpty {
                     showAlert = true
                     error = "username empty"
@@ -127,7 +126,7 @@ struct LoginView: View {
                     .clipShape(Capsule())
                }
                
-        }
+        
 //            .padding()
 //            .background(Color(red: 0, green: 0, blue: 0.5))
 //            .clipShape(Capsule())
