@@ -22,6 +22,6 @@ Module Were This Unable Users Intract With System.
 
 ## Test User Data(Sign In)
 
--Email:Pass@gmail.com
--Password:Pass@123
+-Email:asanka@gmail.com
+-Password:asanka@123
 
