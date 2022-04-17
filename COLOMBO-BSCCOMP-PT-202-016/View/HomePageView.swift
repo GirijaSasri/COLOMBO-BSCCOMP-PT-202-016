@@ -113,20 +113,29 @@ struct ItemCardView: View {
             Text(ad.title)
                 .font(.title3)
                 .fontWeight(.bold)
+           
+            
+            Text(ad.district)
+                .font(.title3)
+//                .fontWeight(.bold)
             
             Text(ad.price)
                 .font(.title3)
-                .fontWeight(.bold)
+//                .fontWeight(.bold)
             
+            Text(ad.size)
+                .font(.title3)
+//                .fontWeight(.bold)
+
             HStack(spacing: 2){
 //                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
 //                    Image("StarIcon")
 //                }
 //                Spacer()
                 
-                Text("RS50000")
-                    .font(.title3)
-                    .fontWeight(.bold)
+//                Text("RS50000")
+//                    .font(.title3)
+//                    .fontWeight(.bold)
                 
             }
             

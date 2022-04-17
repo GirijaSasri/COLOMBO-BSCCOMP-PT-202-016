@@ -33,16 +33,16 @@ struct HomeDeatilView: View {
                 
                 Spacer()
                 
-                Button(action:{},label:{
-                    
-                    Text("Home")
-                        .padding()
-                        .padding(.horizontal)
-                        .background(Color.white)
-                        .cornerRadius(10.0)
-                    
-                    
-                })
+//                Button(action:{},label:{
+//                    
+//                    Text("Home")
+//                        .padding()
+//                        .padding(.horizontal)
+//                        .background(Color.white)
+//                        .cornerRadius(10.0)
+//                    
+//                    
+//                })
                 
             }
             .padding()
@@ -72,10 +72,7 @@ struct DetailView: View {
                 ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
                     Image("StarIcon")
                 }
-                Text("(3.0)")
-                    .opacity(0.4)
-                    .padding(.leading,8)
-                Spacer()
+
             }
             
             Text("Geo Location")
@@ -162,7 +159,7 @@ struct PricebarView: View {
                     .foregroundColor(.white)
                 
                 Spacer()
-                
+
                 Button(action:{},label:{
                     
                     Text("Home")

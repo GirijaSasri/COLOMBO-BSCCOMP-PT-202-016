@@ -16,18 +16,18 @@ struct HomeTabView: View {
         TabView {
                     HomePageView()
                         .tabItem {
-                            Label("Menu", systemImage: "list.dash")
+                            Label("Menu", systemImage: "house")
                         }
 
             if loginViewModdel.isuserlogin{
                
                 SellerAdvertisementView()
                     .tabItem {
-                        Label("Order", systemImage: "square.and.pencil")
+                        Label("Create AD", systemImage: "folder.fill.badge.plus")
                     }
                SettingPageView()
                    .tabItem {
-                    Label("Order", systemImage: "square.and.pencil")
+                    Label("Settings", systemImage: "square.and.pencil")
             }
             
             }

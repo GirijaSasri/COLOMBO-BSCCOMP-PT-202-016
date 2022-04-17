@@ -122,6 +122,7 @@ struct SettingPageView: View {
            }
            
            }
+       
            .accentColor(.blue)
            .navigationTitle("Settings page")
            .toolbar{

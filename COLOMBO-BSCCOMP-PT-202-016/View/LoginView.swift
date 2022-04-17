@@ -15,6 +15,8 @@ struct LoginView: View {
     @State private var showAlert = false
     @State private var error = ""
     @State var hasName: Bool = false
+    
+    @State var isSignUPInActive = false
    
     @StateObject var loginViewModel = LoginViewModel()
     var body: some View {
@@ -149,8 +151,9 @@ struct LoginView: View {
                         .foregroundColor(Color.white.opacity(0.6))
                  
                
+                    NavigationLink(destination: RegistrationView(), isActive: $isSignUPInActive){
                     Button(action:{
-                       
+                        isSignUPInActive = true
                     },label:{
                         Text("Signup")
                             .fontWeight(.heavy)
@@ -159,7 +162,7 @@ struct LoginView: View {
                         
                     })
                     
-                    
+                    }
                     
                 }
               
@@ -185,7 +188,9 @@ struct LoginView: View {
             
         
         }
-   
+        .font(.headline)
+        .navigationTitle("")
+        .navigationBarHidden(true)
     
         
         

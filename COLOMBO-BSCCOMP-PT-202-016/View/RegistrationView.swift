@@ -27,6 +27,8 @@ struct RegistrationView: View {
     
     @State private var showAlert = false
     @State private var error = ""
+    
+    @State var islogActive = false
    
     
     @StateObject var  locationViewModule = LocationViewModule()
@@ -91,7 +93,10 @@ struct RegistrationView: View {
                    
             }
             
+            
+                 NavigationLink(destination: LoginView(), isActive: $islogActive){
             Button(action:{
+                islogActive = true
                 if password != retype_password {
                     showAlert = true
                     error = "Password & Retype Should Be Equal"
@@ -169,7 +174,7 @@ struct RegistrationView: View {
                 
             })
           
-                
+            }
             
             }
             
@@ -195,6 +200,10 @@ struct RegistrationView: View {
             }
             
           }
+        .font(.headline)
+        .navigationTitle("")
+        .navigationBarHidden(true)
+    
        
 //        .background(Color(red: 32/255, green: 32/255, blue: 32/255))
        
