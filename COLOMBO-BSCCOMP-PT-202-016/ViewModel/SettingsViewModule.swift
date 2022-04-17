@@ -30,8 +30,5 @@ class SettingViewModel: ObservableObject
                         print(error.localizedDescription)
                     }
         }
-        
     }
-    
-    
 }

@@ -31,7 +31,6 @@ struct LoginView: View {
                         .padding(.bottom)
                         .foregroundColor(.white)
                     
-//                    Text("Login With Your Email And Password")
                   Image("LoginLogo")
                        .resizable()
                        .aspectRatio(contentMode: .fit)
@@ -42,24 +41,12 @@ struct LoginView: View {
                        .padding(.bottom)
                        .foregroundColor(.white)
                 
-//             HStack{
-//
-//                TextField("Username", text: $username)
-////                  .padding(.all)
-//                    .font(.title2)
-//                    .foregroundColor(.white)
-//
-//                  }
-//                    .padding()
-//                    .background(Color.white.opacity(0.12))
-//                    .cornerRadius(15)
-//                    .padding(.horizontal)
-                
+             
             AppTextFieldView(name: "Username", value: $username)
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
                 
-                    
+        
                     
             HStack{
            
@@ -77,9 +64,6 @@ struct LoginView: View {
                     .cornerRadius(15)
                     .padding(.horizontal)
          
-           
-            
-    
             Button(action:{
             
                 if username.isEmpty {
@@ -104,19 +88,12 @@ struct LoginView: View {
                     error = "Password should be 8 character long"
                 }
                 
-                
-                
                 else  {
                     loginViewModel.login(email: username, password: password)
                     
                 }
-            
             }
-            
-                   
-                   
-                   
-            
+
             )
             
                {Text("Login")
@@ -128,11 +105,6 @@ struct LoginView: View {
                     .clipShape(Capsule())
                }
                
-        
-//            .padding()
-//            .background(Color(red: 0, green: 0, blue: 0.5))
-//            .clipShape(Capsule())
-                
                 Button(action:{},label:{
                     
                     
@@ -162,22 +134,16 @@ struct LoginView: View {
                         
                     })
                     
-                    }
-                    
+                  }
                 }
-              
-               
               }
             .background(Color("AppTextColor").ignoresSafeArea(.all,edges: .all))
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarTrailing){
-                  
-                       
                     Button("Terms & Policy ", action: re_home)
                         .foregroundColor(Color.red)
                    
                 }
-                
             }
             .alert(isPresented: $showAlert) {
                 Alert(
@@ -185,8 +151,6 @@ struct LoginView: View {
                     message: Text(error)
                 )
             }
-            
-        
         }
         .font(.headline)
         .navigationTitle("")

@@ -68,5 +68,4 @@ else{
                 self.location = currentLocation
             }
         }
-
-}
+     }

@@ -70,7 +70,7 @@ struct RegistrationView: View {
                 }
                
                 
-            Section(header:Text("Account Infomation")){
+                Section(header:Text("Account Infomation")){
                 
                 TextField("Email",text: $email)
                     .keyboardType(.emailAddress)
@@ -81,21 +81,16 @@ struct RegistrationView: View {
                 
                 
                 SecureField("Retype Password", text: $retype_password)
-                // showed be removed from the location
-              
-                
-//                TextField("Geo Location",text: $geolocation)
+
                 Button(locationViewModule.location == nil ? "Geo Location" : "Update Location", action: {
                     locationViewModule.checkLocationServiceEnabledInDevice()
                 })
-                
-                
-                   
+               
             }
             
             
-                 NavigationLink(destination: LoginView(), isActive: $islogActive){
-            Button(action:{
+                NavigationLink(destination: LoginView(), isActive: $islogActive){
+                Button(action:{
                 islogActive = true
                 if password != retype_password {
                     showAlert = true
@@ -159,8 +154,6 @@ struct RegistrationView: View {
                 
             },label:{
                
-               
-         
                     Text("Create")
                          .fontWeight(.heavy)
                          .foregroundColor(.black)
@@ -168,15 +161,11 @@ struct RegistrationView: View {
                          .padding(.vertical)
                          .background(Color("button"))
                          .clipShape(Capsule())
-                    
-               
-                
-                
-            })
+              })
           
-            }
+           }
             
-            }
+        }
             
             .accentColor(.blue)
 
@@ -197,16 +186,13 @@ struct RegistrationView: View {
                     title: Text("Registration Error"),
                     message: Text(error)
                 )
-            }
+             }
             
           }
         .font(.headline)
         .navigationTitle("")
         .navigationBarHidden(true)
-    
-       
-//        .background(Color(red: 32/255, green: 32/255, blue: 32/255))
-       
+
         }
        
     func existaccount(){
@@ -233,11 +219,3 @@ struct RegistrationView_Previews: PreviewProvider {
         RegistrationView()
     }
 }
-//
-//#if canImport(UIKit)
-//    extension View{
-//    func hideKeyboard(){
-//        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),to: nil,from: nil,for: nil)
-//    }
-//}
-//#endif

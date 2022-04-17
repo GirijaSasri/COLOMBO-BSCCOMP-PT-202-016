@@ -30,8 +30,5 @@ class SellerViewModel: ObservableObject
                         print(error.localizedDescription)
                     }
         }
-        
     }
-    
-    
 }

@@ -26,7 +26,6 @@ class LoginService: LoginServiceProtocol {
                 print("success")
                 completion(.success(()))
             }
-        }
+         }
     }
-    
 }

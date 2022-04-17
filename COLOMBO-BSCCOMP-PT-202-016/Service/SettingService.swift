@@ -34,8 +34,6 @@ class SettingService: SettingServiceProtocol {
                     "mobile": mobile,
                     "dob":dob,
                     "selectedGender":selectedGender
-//                    "status": "active",
-//                    "statusTime": Timestamp(date: Date())
                 ]) { err in
                     if let err = err {
                         print("Error writing document: \(err)")
@@ -46,5 +44,4 @@ class SettingService: SettingServiceProtocol {
             }
         }
     }
-    
 }

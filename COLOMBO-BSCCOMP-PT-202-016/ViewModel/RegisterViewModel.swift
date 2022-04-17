@@ -19,11 +19,6 @@ class RegisterViewModel: ObservableObject
         self.registerService = registerService
     }
    
-//    var isSignedIn: Bool
-//    {
-//    
-//        return auth.currentUser != nil
-//    }
     
     func register(email:String,password:String,name:String,nic_number:String,mobile:String,dob:Date,selectedGender:Int,clLocation:GeoPoint)
     {
@@ -36,8 +31,5 @@ class RegisterViewModel: ObservableObject
                         print(error.localizedDescription)
                     }
         }
-        
     }
-    
-    
 }

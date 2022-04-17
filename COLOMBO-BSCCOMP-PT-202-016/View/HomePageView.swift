@@ -25,29 +25,6 @@ struct HomePageView_Previews: PreviewProvider {
     }
 }
 
-//struct AppBarView: View {
-//    var body: some View {
-//        HStack{
-//            Button(action:{}) {
-//                Image("menuicon")
-//                    .padding()
-//                    .background(Color(.white))
-//                    .cornerRadius(10.0)
-//            }
-//
-//            Spacer()
-//            Button(action:{}) {
-//                Image("kusalIcon")
-//                    .resizable()
-//                    .frame(width: 42, height:42)
-//                    .cornerRadius(10.0)
-//            }
-//
-//        }
-//        .padding(.horizontal)
-//    }
-//}
-
 struct TagLingView: View {
     var body: some View {
         Text("Find The \nbest ")
@@ -68,7 +45,6 @@ struct LandSeacrhView: View {
     @State private var selection = "Districts"
     let districts = ["Colombo", "Ampara", "Anuradhapura", "Badulla", "Batticalo"]
 
-    
     var body: some View {
         HStack{
             
@@ -81,19 +57,6 @@ struct LandSeacrhView: View {
                        .pickerStyle(.menu)
 
                    }
-            
-//            HStack {
-//                Image("SearchIcon")
-//                    .padding(.trailing,8)
-//                TextField("Search Property",text: $search)
-//            }
-//            .padding(.all,20)
-//            .background(Color.white)
-//            .cornerRadius(10.0)
-//            .padding(.trailing)
-//
-
-            
         }
         .padding(.horizontal)
     }
@@ -119,30 +82,22 @@ struct ItemCardView: View {
                 Text(ad.district)
                 .font(.title3)
             }
-//                .fontWeight(.bold)
+
             HStack{
                 Text("Rs:")
                 Text(ad.price)
                 .font(.title3)
             }
-//                .fontWeight(.bold)
+
             HStack{
                 Text("Size")
                 Text(ad.size)
                 .font(.title3)
             }
-//                .fontWeight(.bold)
+
 
             HStack(spacing: 2){
-//                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-//                    Image("StarIcon")
-//                }
-//                Spacer()
-                
-//                Text("RS50000")
-//                    .font(.title3)
-//                    .fontWeight(.bold)
-                
+
             }
             
         }
@@ -197,8 +152,6 @@ struct HomelayoutView: View {
                                             }
                                             
                                         }
-                                 
-                                        
                                     }
                                 }
                             } else {
