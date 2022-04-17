@@ -29,7 +29,7 @@ class COLOMBO_BSCCOMP_PT_202_016Tests: XCTestCase {
         mockLoginService.loginResult = .success(())
 
         loginViewModel.login(email: "asanka@gmail.com", password: "asanka@123")
-        XCTAssertTrue(loginViewModel.isActiveLoginHome)
+        XCTAssertTrue(loginViewModel.isuserlogin)
     }
     func testLoginFailureTrue() throws {
 

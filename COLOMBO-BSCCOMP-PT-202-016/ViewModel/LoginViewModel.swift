@@ -10,6 +10,7 @@ import FirebaseAuth
 
 class LoginViewModel: ObservableObject
 {
+  
     @Published var isuserlogin = false
     let auth = Auth.auth()
     private var loginService:LoginServiceProtocol

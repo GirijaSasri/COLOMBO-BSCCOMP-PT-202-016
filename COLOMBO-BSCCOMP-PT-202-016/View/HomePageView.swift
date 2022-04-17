@@ -114,17 +114,23 @@ struct ItemCardView: View {
                 .font(.title3)
                 .fontWeight(.bold)
            
-            
-            Text(ad.district)
+            HStack{
+                Text("District:")
+                Text(ad.district)
                 .font(.title3)
+            }
 //                .fontWeight(.bold)
-            
-            Text(ad.price)
+            HStack{
+                Text("Rs:")
+                Text(ad.price)
                 .font(.title3)
+            }
 //                .fontWeight(.bold)
-            
-            Text(ad.size)
+            HStack{
+                Text("Size")
+                Text(ad.size)
                 .font(.title3)
+            }
 //                .fontWeight(.bold)
 
             HStack(spacing: 2){
